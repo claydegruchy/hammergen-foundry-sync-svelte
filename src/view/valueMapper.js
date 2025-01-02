@@ -1,8 +1,76 @@
+import { downloadAttribs } from "./hammergen-api"
+
+
 
 export async function hammergenCharacterToFoundryActor(hammergenChar, foundryActor) {
 	// if (Object.keys(cache).length < 1) {
 	// 	await downloadAttribs()
 	// }
+
+	const formatName = str => str.trim().toLocaleLowerCase().replace(/[^a-zA-Z]/g, "")
+
+
+
+
+	let cache = await downloadAttribs()
+
+
+	let map = {}
+
+	let i = 0
+	console.log("starting")
+	for (let [type, hammerItems] of Object.entries(cache)) {
+		if (type == "item") type = "trapping"
+		let foundryItems = game.items.filter((item, i) => item.type == type)
+		console.log("starting", type, foundryItems.length, hammerItems.length)
+		map[type] = { found: [], notFound: [], skipped: [], hammerItemsTotal: hammerItems.length, foundryItemsTotal: foundryItems.length }
+
+		for (const hammerItem of hammerItems) {
+			let skip = false
+			if (skip) continue
+			if (!hammerItem.source[1]) {
+				map[type].skipped.push(formatName(hammerItem.name))
+				continue
+			}
+			let match = foundryItems.find(foundryItem => formatName(hammerItem.name) == formatName(foundryItem.name))
+			if (match) {
+				// console.log("match", hammerItem.name, match.name)
+				map[type].found.push(formatName(hammerItem.name))
+
+			} else {
+				// console.error("match not found", hammerItem.name, match)
+				map[type].notFound.push(formatName(hammerItem.name))
+			}
+
+
+
+		}
+
+
+		// for (const item of items) {
+		// 	if (item.name == )
+		// }
+		// if (items.length < 1) console.log("no real", type)
+	}
+	console.log(map)
+
+
+
+
+
+
+
+
+
+	let itemsToFind = []
+
+
+
+
+
+	// if(source[1])
+
+	return
 
 
 	// get actor
@@ -28,11 +96,16 @@ export async function hammergenCharacterToFoundryActor(hammergenChar, foundryAct
 		updateObject["data.characteristics." + k.toLocaleLowerCase() + ".advances"] = v
 	}
 
-
+	let mappingTable = {}
+	let warnings = []
 	// skills
 	let skillsToAdd = []
-	let mappingTable = {}
-	for (const { number, id, wh: { object: { name } } } of hammergenChar.skills) {
+
+
+
+
+	return
+	for (const { number, wh: { id, object: { name } } } of hammergenChar.skills) {
 
 
 		let skill = game.items.filter((item, i) => item.type == "skill")
@@ -40,11 +113,15 @@ export async function hammergenCharacterToFoundryActor(hammergenChar, foundryAct
 
 
 		if (skill) {
-			console.log("found", name)
+			// console.log("found", name)
 			skillsToAdd.push(skill)
-			
+			mappingTable[id] = skill.id
 		} else {
-			console.error("skill not found", name)
+			console.error("skill not found", id, name,)
+			warnings.push(`Couldnt find ${name}`)
+			console.log("starting fuzzy search")
+			// name.replace(/[^a-zA-Z\s]/g, "").split(" ")
+
 		}
 
 		// loop up local value here
@@ -53,7 +130,7 @@ export async function hammergenCharacterToFoundryActor(hammergenChar, foundryAct
 	// let exampleSkill = "Outdoor Survival"
 
 
-
+	console.log(mappingTable)
 
 
 	//    targetActor.update({ [path]: 10 });
