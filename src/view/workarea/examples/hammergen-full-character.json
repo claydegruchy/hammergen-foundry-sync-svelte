@@ -1,0 +1,2113 @@
+{
+	"data": {
+		"canEdit": true,
+		"id": "67644d6249960d00014cc0b7",
+		"object": {
+			"attributeAdvances": {
+				"Ag": 0,
+				"BS": 0,
+				"Dex": 7,
+				"Fel": 8,
+				"I": 6,
+				"Int": 0,
+				"S": 0,
+				"T": 0,
+				"WP": 1,
+				"WS": 0
+			},
+			"baseAttributes": {
+				"Ag": 50,
+				"BS": 38,
+				"Dex": 50,
+				"Fel": 29,
+				"I": 47,
+				"Int": 41,
+				"S": 34,
+				"T": 39,
+				"WP": 39,
+				"WS": 45
+			},
+			"brass": 57,
+			"career": {
+				"number": 2,
+				"wh": {
+					"canEdit": false,
+					"id": "5d18774b23353e73dca2ec5b",
+					"object": {
+						"class": 6,
+						"description": "Unscrupulous and charming, you separate fools from their money; thankfully, there is no shortage of fools…",
+						"level1": {
+							"attributes": [
+								5,
+								7,
+								10
+							],
+							"items": "Backpack, 2 Sets of Clothing, Deck of Cards, Dice",
+							"name": "Swindler",
+							"skills": [
+								"5cdf457530259922e8ea2107",
+								"5cadcbb5828dc9389cc7b169",
+								"5cadc5d8828dc9389cc7b158",
+								"5cea891eadaed446d44365e3",
+								"5cdf464330259922e8ea2109",
+								"5cadd044828dc9389cc7b16c",
+								"5cadcbf8828dc9389cc7b16a",
+								"5ce9ce54179ba450886fba81"
+							],
+							"standing": 3,
+							"status": 0,
+							"talents": [
+								"5d1875bd23353e73dca2ec5a",
+								"5d0fc6a0ff5ffa6a34fd1589",
+								"5cadca84828dc9389cc7b166",
+								"5ce1bd7184577f3a58e9b5da"
+							]
+						},
+						"level2": {
+							"attributes": [
+								9
+							],
+							"items": "1 Forged Document, 2 Sets of Quality Clothing, Selection of Coloured Powders and Water, Selection of Trinkets and Charms",
+							"name": "Charlatan",
+							"skills": [
+								"5ce114c70f123f1f14a4cc66",
+								"5ce302d497b74e3c4cebdbbe",
+								"5cec2d07488ae64fb84c0482",
+								"5cdfbaf930259922e8ea210a",
+								"5caddaa1a48cc24ecc4eca8d",
+								"5cadd0b9828dc9389cc7b16e"
+							],
+							"standing": 5,
+							"status": 0,
+							"talents": [
+								"5ce1184c0f123f1f14a4cc68",
+								"5cadd21e828dc9389cc7b16f",
+								"5ce9d216179ba450886fba88",
+								"5cec35740921e637eca76a07"
+							]
+						},
+						"level3": {
+							"attributes": [
+								6
+							],
+							"items": "Disguise Kit, Lock Picks, Multiple Forged Documents",
+							"name": "Con Artist",
+							"skills": [
+								"5d1877cb23353e73dca2ec5c",
+								"5cea55d10bf34d4a646aa973",
+								"5ce9ccc7179ba450886fba7f",
+								"5ce9ccf5179ba450886fba80"
+							],
+							"standing": 2,
+							"status": 1,
+							"talents": [
+								"5ceb25a45e89305300c4bdbd",
+								"5ce1bb6584577f3a58e9b5d6",
+								"5cadd28c828dc9389cc7b170",
+								"5cadcb0d828dc9389cc7b168"
+							]
+						},
+						"level4": {
+							"attributes": [
+								8
+							],
+							"items": "Forged Seal, Writing Kit",
+							"name": "Scoundrel",
+							"skills": [
+								"5d18736823353e73dca2ec59",
+								"5cade0c1a48cc24ecc4ecaa0"
+							],
+							"standing": 4,
+							"status": 1,
+							"talents": [
+								"5cec2f68488ae64fb84c0485",
+								"5cec35d90921e637eca76a08",
+								"5ce96ca4fa0e2a2ae876c4ee",
+								"5ce1bf5984577f3a58e9b5dd"
+							]
+						},
+						"name": "Charlatan",
+						"shared": true,
+						"source": {
+							"1": "p. 102"
+						},
+						"species": [
+							0,
+							1,
+							3,
+							5
+						]
+					},
+					"ownerId": "admin"
+				}
+			},
+			"careerPath": [
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": false,
+						"id": "5d18774b23353e73dca2ec5b",
+						"object": {
+							"class": 6,
+							"description": "Unscrupulous and charming, you separate fools from their money; thankfully, there is no shortage of fools…",
+							"level1": {
+								"attributes": [
+									5,
+									7,
+									10
+								],
+								"items": "Backpack, 2 Sets of Clothing, Deck of Cards, Dice",
+								"name": "Swindler",
+								"skills": [
+									"5cdf457530259922e8ea2107",
+									"5cadcbb5828dc9389cc7b169",
+									"5cadc5d8828dc9389cc7b158",
+									"5cea891eadaed446d44365e3",
+									"5cdf464330259922e8ea2109",
+									"5cadd044828dc9389cc7b16c",
+									"5cadcbf8828dc9389cc7b16a",
+									"5ce9ce54179ba450886fba81"
+								],
+								"standing": 3,
+								"status": 0,
+								"talents": [
+									"5d1875bd23353e73dca2ec5a",
+									"5d0fc6a0ff5ffa6a34fd1589",
+									"5cadca84828dc9389cc7b166",
+									"5ce1bd7184577f3a58e9b5da"
+								]
+							},
+							"level2": {
+								"attributes": [
+									9
+								],
+								"items": "1 Forged Document, 2 Sets of Quality Clothing, Selection of Coloured Powders and Water, Selection of Trinkets and Charms",
+								"name": "Charlatan",
+								"skills": [
+									"5ce114c70f123f1f14a4cc66",
+									"5ce302d497b74e3c4cebdbbe",
+									"5cec2d07488ae64fb84c0482",
+									"5cdfbaf930259922e8ea210a",
+									"5caddaa1a48cc24ecc4eca8d",
+									"5cadd0b9828dc9389cc7b16e"
+								],
+								"standing": 5,
+								"status": 0,
+								"talents": [
+									"5ce1184c0f123f1f14a4cc68",
+									"5cadd21e828dc9389cc7b16f",
+									"5ce9d216179ba450886fba88",
+									"5cec35740921e637eca76a07"
+								]
+							},
+							"level3": {
+								"attributes": [
+									6
+								],
+								"items": "Disguise Kit, Lock Picks, Multiple Forged Documents",
+								"name": "Con Artist",
+								"skills": [
+									"5d1877cb23353e73dca2ec5c",
+									"5cea55d10bf34d4a646aa973",
+									"5ce9ccc7179ba450886fba7f",
+									"5ce9ccf5179ba450886fba80"
+								],
+								"standing": 2,
+								"status": 1,
+								"talents": [
+									"5ceb25a45e89305300c4bdbd",
+									"5ce1bb6584577f3a58e9b5d6",
+									"5cadd28c828dc9389cc7b170",
+									"5cadcb0d828dc9389cc7b168"
+								]
+							},
+							"level4": {
+								"attributes": [
+									8
+								],
+								"items": "Forged Seal, Writing Kit",
+								"name": "Scoundrel",
+								"skills": [
+									"5d18736823353e73dca2ec59",
+									"5cade0c1a48cc24ecc4ecaa0"
+								],
+								"standing": 4,
+								"status": 1,
+								"talents": [
+									"5cec2f68488ae64fb84c0485",
+									"5cec35d90921e637eca76a08",
+									"5ce96ca4fa0e2a2ae876c4ee",
+									"5ce1bf5984577f3a58e9b5dd"
+								]
+							},
+							"name": "Charlatan",
+							"shared": true,
+							"source": {
+								"1": "p. 102"
+							},
+							"species": [
+								0,
+								1,
+								3,
+								5
+							]
+						},
+						"ownerId": "admin"
+					}
+				}
+			],
+			"carriedItems": [
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": false,
+						"id": "5f5e97d5807c850c3dcd01bd",
+						"object": {
+							"ammunition": {
+								"dmg": 0,
+								"group": 0,
+								"rng": 0,
+								"rngMult": 0
+							},
+							"armour": {
+								"group": 0,
+								"location": [],
+								"points": 0
+							},
+							"availability": 0,
+							"container": {
+								"capacity": 0,
+								"carryType": 0
+							},
+							"description": "A small bottle of perfumes.",
+							"enc": 0,
+							"grimoire": {
+								"spells": []
+							},
+							"melee": {
+								"dmg": 0,
+								"dmgSbMult": 0,
+								"group": 0,
+								"hands": 0,
+								"reach": 0
+							},
+							"name": "Perfume",
+							"other": {
+								"carryType": 1
+							},
+							"price": 120,
+							"properties": [],
+							"ranged": {
+								"dmg": 0,
+								"dmgSbMult": 0,
+								"group": 0,
+								"hands": 0,
+								"rng": 0,
+								"rngSbMult": 0
+							},
+							"runes": [],
+							"shared": true,
+							"source": {
+								"1": "p. 302"
+							},
+							"type": 5
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": false,
+						"id": "5f5e9617807c850c3dcd01bb",
+						"object": {
+							"ammunition": {
+								"dmg": 0,
+								"group": 0,
+								"rng": 0,
+								"rngMult": 0
+							},
+							"armour": {
+								"group": 0,
+								"location": [],
+								"points": 0
+							},
+							"availability": 1,
+							"container": {
+								"capacity": 0,
+								"carryType": 0
+							},
+							"description": "Nobles' ceremonial outfit. ",
+							"enc": 1,
+							"grimoire": {
+								"spells": []
+							},
+							"melee": {
+								"dmg": 0,
+								"dmgSbMult": 0,
+								"group": 0,
+								"hands": 0,
+								"reach": 0
+							},
+							"name": "Courtly Garb",
+							"other": {
+								"carryType": 0
+							},
+							"price": 2880,
+							"properties": [],
+							"ranged": {
+								"dmg": 0,
+								"dmgSbMult": 0,
+								"group": 0,
+								"hands": 0,
+								"rng": 0,
+								"rngSbMult": 0
+							},
+							"runes": [],
+							"shared": true,
+							"source": {
+								"1": "p. 302"
+							},
+							"type": 5
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": false,
+						"id": "6559309249960d0001acc288",
+						"object": {
+							"ammunition": {
+								"dmg": 0,
+								"group": 0,
+								"rng": 0,
+								"rngMult": 0
+							},
+							"armour": {
+								"group": 0,
+								"location": [],
+								"points": 0
+							},
+							"availability": 2,
+							"container": {
+								"capacity": 1,
+								"carryType": 1
+							},
+							"description": "Concoction. Forms: potion. Drinker becomes immune to all poisons for 1 hour.",
+							"enc": 0,
+							"grimoire": {
+								"spells": []
+							},
+							"melee": {
+								"dmg": 0,
+								"dmgSbMult": 0,
+								"group": 0,
+								"hands": 1,
+								"reach": 0
+							},
+							"name": "Stag's Ward",
+							"other": {
+								"carryType": 1
+							},
+							"price": 720,
+							"properties": [],
+							"ranged": {
+								"dmg": 0,
+								"dmgSbMult": 0,
+								"group": 0,
+								"hands": 1,
+								"rng": 0,
+								"rngSbMult": 0
+							},
+							"runes": [],
+							"shared": true,
+							"source": {
+								"22": "p. 108, 111"
+							},
+							"type": 5
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": false,
+						"id": "6643d87e49960d0001557342",
+						"object": {
+							"ammunition": {
+								"dmg": 0,
+								"group": 1,
+								"rng": 0,
+								"rngMult": 0
+							},
+							"armour": {
+								"group": 0,
+								"location": [],
+								"points": 0
+							},
+							"availability": 1,
+							"container": {
+								"capacity": 1,
+								"carryType": 2
+							},
+							"description": "Vial of Schlaff poison. Anyone affected by it shows the following symptoms: slurred speech, apathy, sleepiness, and heave red-rimmed eyes. A Character with medical knowledge may attempt a Hard (-20) Lore - Medicine Test to identify the cause of these symptoms. If a character consumes it, they need to pass a Hard (-20) Endurance Test or gain one Fatigued Condition for each dose consumed.",
+							"enc": 0,
+							"grimoire": {
+								"spells": []
+							},
+							"melee": {
+								"dmg": 0,
+								"dmgSbMult": 0,
+								"group": 0,
+								"hands": 1,
+								"reach": 0
+							},
+							"name": "Vial of Schlaf",
+							"other": {
+								"carryType": 1
+							},
+							"price": 0,
+							"properties": [],
+							"ranged": {
+								"dmg": 0,
+								"dmgSbMult": 0,
+								"group": 1,
+								"hands": 1,
+								"rng": 0,
+								"rngSbMult": 0
+							},
+							"runes": [],
+							"shared": true,
+							"source": {
+								"28": "p. 24"
+							},
+							"type": 5
+						},
+						"ownerId": "admin"
+					}
+				}
+			],
+			"corruption": 0,
+			"currentExp": 0,
+			"description": "Female Woodelf. Age: 35, Height: 6'5\", Eyes: Copper and Amber, Hair: Yellow Blond",
+			"equippedItems": [
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": false,
+						"id": "5c48f45c0972393f20ee03bb",
+						"object": {
+							"ammunition": {
+								"dmg": 0,
+								"group": 0,
+								"rng": 0,
+								"rngMult": 0
+							},
+							"armour": {
+								"group": 0,
+								"location": [],
+								"points": 0
+							},
+							"availability": 0,
+							"container": {
+								"capacity": 0,
+								"carryType": 0
+							},
+							"description": "Deadlier version of a knife. Broken sword can act as dagger with Dangerous Flaw if it lacks integral hilt.",
+							"enc": 0,
+							"grimoire": {
+								"spells": []
+							},
+							"melee": {
+								"dmg": 2,
+								"dmgSbMult": 1,
+								"group": 0,
+								"hands": 1,
+								"reach": 1
+							},
+							"name": "Dagger",
+							"other": {
+								"carryType": 0
+							},
+							"price": 192,
+							"properties": [],
+							"ranged": {
+								"dmg": 0,
+								"dmgSbMult": 0,
+								"group": 0,
+								"hands": 0,
+								"rng": 0,
+								"rngSbMult": 0
+							},
+							"runes": [],
+							"shared": true,
+							"source": {
+								"1": "p. 294",
+								"6": "p. 90"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": false,
+						"id": "5ced97d41e0d2244e8c36bb3",
+						"object": {
+							"ammunition": {
+								"dmg": 0,
+								"group": 0,
+								"rng": 0,
+								"rngMult": 0
+							},
+							"armour": {
+								"group": 0,
+								"location": [],
+								"points": 0
+							},
+							"availability": 0,
+							"container": {
+								"capacity": 0,
+								"carryType": 0
+							},
+							"description": "Regular cloths.",
+							"enc": 1,
+							"grimoire": {
+								"spells": []
+							},
+							"melee": {
+								"dmg": 0,
+								"dmgSbMult": 0,
+								"group": 0,
+								"hands": 0,
+								"reach": 0
+							},
+							"name": "Clothing",
+							"other": {
+								"carryType": 0
+							},
+							"price": 72,
+							"properties": [],
+							"ranged": {
+								"dmg": 0,
+								"dmgSbMult": 0,
+								"group": 0,
+								"hands": 0,
+								"rng": 0,
+								"rngSbMult": 0
+							},
+							"runes": [],
+							"shared": true,
+							"source": {
+								"1": "p. 302"
+							},
+							"type": 5
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": false,
+						"id": "5ced99ab1e0d2244e8c36bb6",
+						"object": {
+							"ammunition": {
+								"dmg": 0,
+								"group": 0,
+								"rng": 0,
+								"rngMult": 0
+							},
+							"armour": {
+								"group": 0,
+								"location": [],
+								"points": 0
+							},
+							"availability": 0,
+							"container": {
+								"capacity": 2,
+								"carryType": 0
+							},
+							"description": "Sling bag you can wear over your shoulder. Counts as \"worn\" when slung over shoulder.",
+							"enc": 1,
+							"grimoire": {
+								"spells": []
+							},
+							"melee": {
+								"dmg": 0,
+								"dmgSbMult": 0,
+								"group": 0,
+								"hands": 0,
+								"reach": 0
+							},
+							"name": "Sling Bag",
+							"other": {
+								"carryType": 0
+							},
+							"price": 12,
+							"properties": [],
+							"ranged": {
+								"dmg": 0,
+								"dmgSbMult": 0,
+								"group": 0,
+								"hands": 0,
+								"rng": 0,
+								"rngSbMult": 0
+							},
+							"runes": [],
+							"shared": true,
+							"source": {
+								"1": "p. 301"
+							},
+							"type": 4
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": false,
+						"id": "5f1cb1cef3230369ab4eb3d1",
+						"object": {
+							"ammunition": {
+								"dmg": 0,
+								"group": 0,
+								"rng": 0,
+								"rngMult": 0
+							},
+							"armour": {
+								"group": 0,
+								"location": [],
+								"points": 0
+							},
+							"availability": 0,
+							"container": {
+								"capacity": 0,
+								"carryType": 0
+							},
+							"description": "Cloak without hood. Protects against the elements. When wrapped around hand can be used as parrying weapon. When making a Test to see if an opponent becomes entangled in a cloak, the cloak has a Strength of 25.",
+							"enc": 1,
+							"grimoire": {
+								"spells": []
+							},
+							"melee": {
+								"dmg": 0,
+								"dmgSbMult": 1,
+								"group": 5,
+								"hands": 1,
+								"reach": 2
+							},
+							"name": "Cloak",
+							"other": {
+								"carryType": 0
+							},
+							"price": 120,
+							"properties": [
+								{
+									"canEdit": false,
+									"id": "5cdb0a042218c71f3493c092",
+									"object": {
+										"applicableTo": [
+											0,
+											1
+										],
+										"description": "Gains a bonus of +1 SL to any Melee Test when opposing an incoming attack.",
+										"name": "Defensive",
+										"shared": true,
+										"source": {
+											"1": "p. 298"
+										},
+										"type": 0
+									},
+									"ownerId": "admin"
+								},
+								{
+									"canEdit": false,
+									"id": "5cdb0a7f2218c71f3493c094",
+									"object": {
+										"applicableTo": [
+											0,
+											1,
+											2
+										],
+										"description": "Any successfully hit target gains the Entangled Condition with a Strength value equal to Strength Characteristic of the attacker. When Entangling a target, the attacker cannot otherwise use the weapon to hit. The attacker can end the Entangling at any time.",
+										"name": "Entangle",
+										"shared": true,
+										"source": {
+											"1": "p. 298"
+										},
+										"type": 0
+									},
+									"ownerId": "admin"
+								},
+								{
+									"canEdit": false,
+									"id": "5c48f193bc0ede3b9cffe87a",
+									"object": {
+										"applicableTo": [
+											0,
+											1,
+											2
+										],
+										"description": "All APs are doubled against Undamaging weapons. The weapon does not automatically inflict a minimum of 1 Wound on a successful hit in combat.",
+										"name": "Undamaging",
+										"shared": true,
+										"source": {
+											"1": "p. 299"
+										},
+										"type": 1
+									},
+									"ownerId": "admin"
+								}
+							],
+							"ranged": {
+								"dmg": 0,
+								"dmgSbMult": 0,
+								"group": 0,
+								"hands": 0,
+								"rng": 0,
+								"rngSbMult": 0
+							},
+							"runes": [],
+							"shared": true,
+							"source": {
+								"1": "p. 302",
+								"6": "p. 95"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": false,
+						"id": "5f1cb7fea8f44dc4bcf12761",
+						"object": {
+							"ammunition": {
+								"dmg": 0,
+								"group": 0,
+								"rng": 0,
+								"rngMult": 0
+							},
+							"armour": {
+								"group": 0,
+								"location": [],
+								"points": 0
+							},
+							"availability": 0,
+							"container": {
+								"capacity": 0,
+								"carryType": 0
+							},
+							"description": "A hood.",
+							"enc": 0,
+							"grimoire": {
+								"spells": []
+							},
+							"melee": {
+								"dmg": 0,
+								"dmgSbMult": 0,
+								"group": 0,
+								"hands": 0,
+								"reach": 0
+							},
+							"name": "Hood",
+							"other": {
+								"carryType": 0
+							},
+							"price": 5,
+							"properties": [],
+							"ranged": {
+								"dmg": 0,
+								"dmgSbMult": 0,
+								"group": 0,
+								"hands": 0,
+								"rng": 0,
+								"rngSbMult": 0
+							},
+							"runes": [],
+							"shared": true,
+							"source": {
+								"1": "p. 302"
+							},
+							"type": 5
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": false,
+						"id": "5f5e9a37807c850c3dcd01c0",
+						"object": {
+							"ammunition": {
+								"dmg": 0,
+								"group": 0,
+								"rng": 0,
+								"rngMult": 0
+							},
+							"armour": {
+								"group": 0,
+								"location": [],
+								"points": 0
+							},
+							"availability": 2,
+							"container": {
+								"capacity": 0,
+								"carryType": 0
+							},
+							"description": "A gold ring with engraved stamp. Usually worn by nobles or high ranking guild officials.",
+							"enc": 0,
+							"grimoire": {
+								"spells": []
+							},
+							"melee": {
+								"dmg": 0,
+								"dmgSbMult": 0,
+								"group": 0,
+								"hands": 0,
+								"reach": 0
+							},
+							"name": "Signet Ring",
+							"other": {
+								"carryType": 0
+							},
+							"price": 1200,
+							"properties": [],
+							"ranged": {
+								"dmg": 0,
+								"dmgSbMult": 0,
+								"group": 0,
+								"hands": 0,
+								"rng": 0,
+								"rngSbMult": 0
+							},
+							"runes": [],
+							"shared": true,
+							"source": {
+								"1": "p. 302"
+							},
+							"type": 5
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": true,
+						"id": "67644d5449960d00014cc0b6",
+						"object": {
+							"ammunition": {
+								"dmg": 0,
+								"group": 1,
+								"rng": 0,
+								"rngMult": 0
+							},
+							"armour": {
+								"group": 0,
+								"location": [],
+								"points": 0
+							},
+							"availability": 2,
+							"container": {
+								"capacity": 1,
+								"carryType": 2
+							},
+							"description": "A gold etched headress with dangling silver chains, on a twisted wooden base. A very fashionable hat in the tree top aristocracy.",
+							"enc": 0,
+							"grimoire": {
+								"spells": []
+							},
+							"melee": {
+								"dmg": 0,
+								"dmgSbMult": 0,
+								"group": 0,
+								"hands": 1,
+								"reach": 0
+							},
+							"name": "Headress",
+							"other": {
+								"carryType": 0
+							},
+							"price": 300,
+							"properties": [],
+							"ranged": {
+								"dmg": 0,
+								"dmgSbMult": 0,
+								"group": 1,
+								"hands": 1,
+								"rng": 0,
+								"rngSbMult": 0
+							},
+							"runes": [],
+							"shared": true,
+							"source": {
+								"0": ""
+							},
+							"type": 5
+						},
+						"ownerId": "60927308a1329f415fec9303"
+					}
+				}
+			],
+			"fate": 1,
+			"fortune": 1,
+			"gold": 0,
+			"mutations": [],
+			"name": "1S1 Ambassador - Linsor Foamheart",
+			"notes": "You are actually a high elf, and you are not an Ambassador.",
+			"prayers": [],
+			"resilience": 1,
+			"resolve": 1,
+			"shared": false,
+			"silver": 0,
+			"sin": 0,
+			"skills": [
+				{
+					"number": 0,
+					"wh": {
+						"canEdit": false,
+						"id": "5cadddd3a48cc24ecc4eca99",
+						"object": {
+							"attribute": 6,
+							"description": "Proficiency at riding animals.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": true,
+							"name": "Ride",
+							"shared": true,
+							"source": {
+								"1": "p. 129"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 5,
+					"wh": {
+						"canEdit": false,
+						"id": "5cadc5d8828dc9389cc7b158",
+						"object": {
+							"attribute": 4,
+							"description": "Ability to handle alcohol without  suffering its negative consequences. ",
+							"displayZero": true,
+							"group": [],
+							"isGroup": false,
+							"name": "Consume Alcohol",
+							"shared": true,
+							"source": {
+								"1": "p. 120"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 6,
+					"wh": {
+						"canEdit": false,
+						"id": "5cadd044828dc9389cc7b16c",
+						"object": {
+							"attribute": 10,
+							"description": "Allows to quickly find useful gossips and spread rumors efficiently.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": false,
+							"name": "Gossip",
+							"shared": true,
+							"source": {
+								"1": "p. 122"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 5,
+					"wh": {
+						"canEdit": false,
+						"id": "5ce84fb806ad2230542604e2",
+						"object": {
+							"attribute": 3,
+							"description": "You can swim. Swimming in calm water does not need a Test to succeed.\r\nThe test is required if there are any adverse conditions such as: currents, cold water, extra encumbrance, etc.\r\nIn combat, Swim is used when fighting in the water (deep). It replaces skills like Athletics to govern Movement. Your swim speed is half of your Movement speed.",
+							"displayZero": false,
+							"group": [],
+							"isGroup": false,
+							"name": "Swim",
+							"shared": true,
+							"source": {
+								"1": "p. 131"
+							},
+							"type": 1
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 0,
+					"wh": {
+						"canEdit": false,
+						"id": "5ce984f11140dc34041696a0",
+						"object": {
+							"attribute": 3,
+							"description": "By having a level in this Skill, you are automatically assumed to be able to row in calm water.\r\nThe Row Skill Test is usually necessary when rowing in some adverse conditions or racing.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": false,
+							"name": "Row",
+							"shared": true,
+							"source": {
+								"1": "p. 129"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 6,
+					"wh": {
+						"canEdit": false,
+						"id": "5cadcbb5828dc9389cc7b169",
+						"object": {
+							"attribute": 10,
+							"description": "Makes people think better of you and your actions.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": false,
+							"name": "Charm",
+							"shared": true,
+							"source": {
+								"1": "p. 120"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 12,
+					"wh": {
+						"canEdit": false,
+						"id": "5cdfbaf930259922e8ea210a",
+						"object": {
+							"attribute": 8,
+							"description": "Let you estimate the value of rare artifacts, works of art, and other unusual goods.",
+							"displayZero": false,
+							"group": [],
+							"isGroup": false,
+							"name": "Evaluate",
+							"shared": true,
+							"source": {
+								"1": "p. 121"
+							},
+							"type": 1
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 0,
+					"wh": {
+						"canEdit": false,
+						"id": "5cea88faadaed446d44365e2",
+						"object": {
+							"attribute": 10,
+							"description": "You can use it to entertain people near you with your talents such as stories, songs, acting, etc. The SL of the Entertain Test shows how much others like your performance.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": true,
+							"name": "Entertain",
+							"shared": true,
+							"source": {
+								"1": "p. 121"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 0,
+					"wh": {
+						"canEdit": false,
+						"id": "5ce3027f97b74e3c4cebdbbd",
+						"object": {
+							"attribute": 6,
+							"description": "Describes how well you move and perform physical activities such as jumping or running.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": false,
+							"name": "Athletics",
+							"shared": true,
+							"source": {
+								"1": "p. 119"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 5,
+					"wh": {
+						"canEdit": false,
+						"id": "5ce114c70f123f1f14a4cc66",
+						"object": {
+							"attribute": 9,
+							"description": "Allows to resist influence of others (such as Charm or Intimidate).",
+							"displayZero": true,
+							"group": [],
+							"isGroup": false,
+							"name": "Cool",
+							"shared": true,
+							"source": {
+								"1": "p. 120"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 0,
+					"wh": {
+						"canEdit": false,
+						"id": "5d0ead9cc773f26d50fcc956",
+						"object": {
+							"attribute": 7,
+							"description": "Lets you create works of art. To use Art without extra penalties you have to have access to appropriate Trade Tools. Large projects might require extended Tests. SL determines the quality of your work.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": true,
+							"name": "Art",
+							"shared": true,
+							"source": {
+								"1": "p. 119"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 0,
+					"wh": {
+						"canEdit": false,
+						"id": "5cdf45c430259922e8ea2108",
+						"object": {
+							"attribute": 6,
+							"description": "Ability to guide basic vehicles such as carts and lumbering coaches.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": false,
+							"name": "Drive",
+							"shared": true,
+							"source": {
+								"1": "p. 121"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 5,
+					"wh": {
+						"canEdit": false,
+						"id": "5ce9ce54179ba450886fba81",
+						"object": {
+							"attribute": 7,
+							"description": "Let's you perform nimble hand movements that allow to pick pockets, perform car/coin tricks, etc. Test of this Skill is usually Opposed by the Perception of your target.\r\nYou can also use this Skill in gambling.  Before any round you may attempt Sleight of Hand Test (Opposed if other are suspecting you). If you succeed to may reverse your Gamble Test tat round if necessary.",
+							"displayZero": false,
+							"group": [],
+							"isGroup": false,
+							"name": "Sleight of Hand",
+							"shared": true,
+							"source": {
+								"1": "p. 130"
+							},
+							"type": 1
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 3,
+					"wh": {
+						"canEdit": false,
+						"id": "5f5e910a807c850c3dcd01b7",
+						"object": {
+							"attribute": 6,
+							"description": "Your ability to operate a Frigate or a similar ship. You are automatically presumed to be able to sail in calm water. \nTest is usually necessary when sailing in adverse conditions or racing.\nYou can use Sail as a basic Skill with any other Specialisations.",
+							"displayZero": false,
+							"group": [
+								"5ce986db1140dc34041696a1"
+							],
+							"isGroup": false,
+							"name": "Sail - Frigate",
+							"shared": true,
+							"source": {
+								"1": "p. 129"
+							},
+							"type": 1
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 0,
+					"wh": {
+						"canEdit": false,
+						"id": "5caddae3a48cc24ecc4eca8e",
+						"object": {
+							"attribute": 10,
+							"description": "How well can you lead others and command their respect.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": false,
+							"name": "Leadership",
+							"shared": true,
+							"source": {
+								"1": "p. 126"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 0,
+					"wh": {
+						"canEdit": false,
+						"id": "5ce8410d3ec45d1a88e33239",
+						"object": {
+							"attribute": 9,
+							"description": "Allows you to befriend or subjugate animals.\r\nTake an Opposed Charm Animal/Willpower test. If the animal(s) is docile, this Test is not Opposed. You can influence WP Bonus + SL animals at once.\r\nIn combat, if you succeed, any affected animals will not attack you this round and you gain +1 Advantage. You can use this skill every Round until you fail the Test. After failing, you cannot use it on the same animals anymore.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": false,
+							"name": "Charm Animal",
+							"shared": true,
+							"source": {
+								"1": "p. 121"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 0,
+					"wh": {
+						"canEdit": false,
+						"id": "5ce116570f123f1f14a4cc67",
+						"object": {
+							"attribute": 5,
+							"description": "Help with orientation in wilderness using any means available: maps, landmarks, stars, etc.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": false,
+							"name": "Navigation",
+							"shared": true,
+							"source": {
+								"1": "p. 126"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 0,
+					"wh": {
+						"canEdit": false,
+						"id": "5ce841743ec45d1a88e3323a",
+						"object": {
+							"attribute": 3,
+							"description": "Determines how good you are at climbing.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": false,
+							"name": "Climb",
+							"shared": true,
+							"source": {
+								"1": "p. 120"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 3,
+					"wh": {
+						"canEdit": false,
+						"id": "5ce302d497b74e3c4cebdbbe",
+						"object": {
+							"attribute": 6,
+							"description": "Dodge allows you to avoid harm by ducking, diving, sidestepping, etc.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": false,
+							"name": "Dodge",
+							"shared": true,
+							"source": {
+								"1": "p. 121"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 0,
+					"wh": {
+						"canEdit": false,
+						"id": "5cadddb1a48cc24ecc4eca98",
+						"object": {
+							"attribute": 3,
+							"description": "You can fight and coerce others to influence their behavior.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": false,
+							"name": "Intimidate",
+							"shared": true,
+							"source": {
+								"1": "p. 122-123"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 5,
+					"wh": {
+						"canEdit": false,
+						"id": "5caddaa1a48cc24ecc4eca8d",
+						"object": {
+							"attribute": 5,
+							"description": "Lets you get a sense when something is wrong or when people might be hiding something from you.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": false,
+							"name": "Intuition",
+							"shared": true,
+							"source": {
+								"1": "p. 123"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 3,
+					"wh": {
+						"canEdit": false,
+						"id": "5ce47042099f0c36546bddde",
+						"object": {
+							"attribute": 1,
+							"description": "Training and experience with the weapons from Basic group.",
+							"displayZero": false,
+							"group": [
+								"5ce305ee97b74e3c4cebdbc0",
+								"67267fc949960d00011f3257"
+							],
+							"isGroup": false,
+							"name": "Melee - Basic",
+							"shared": true,
+							"source": {
+								"1": "p. 126"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 5,
+					"wh": {
+						"canEdit": false,
+						"id": "5cea8beaadaed446d44365ea",
+						"object": {
+							"attribute": 10,
+							"description": "You can use it to entertain people near you with your singing. The SL of the Entertain Test shows how much others like your songs.",
+							"displayZero": false,
+							"group": [
+								"5cea88faadaed446d44365e2",
+								"67267f3549960d00011f3256"
+							],
+							"isGroup": false,
+							"name": "Entertain - Singing",
+							"shared": true,
+							"source": {
+								"1": "p. 121"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 6,
+					"wh": {
+						"canEdit": false,
+						"id": "5cec2d07488ae64fb84c0482",
+						"object": {
+							"attribute": 10,
+							"description": "You can use it to entertain people near you with your acting. The SL of the Entertain Test shows how much others like your performance.",
+							"displayZero": false,
+							"group": [
+								"5cea88faadaed446d44365e2"
+							],
+							"isGroup": false,
+							"name": "Entertain - Acting",
+							"shared": true,
+							"source": {
+								"1": "p. 121"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 6,
+					"wh": {
+						"canEdit": false,
+						"id": "5cdf464330259922e8ea2109",
+						"object": {
+							"attribute": 8,
+							"description": "Allows to estimate probability of winning and improve chances of winning.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": false,
+							"name": "Gamble",
+							"shared": true,
+							"source": {
+								"1": "p. 121"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 2,
+					"wh": {
+						"canEdit": false,
+						"id": "5cadd0b9828dc9389cc7b16e",
+						"object": {
+							"attribute": 5,
+							"description": "Ability to notice with any sense available.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": false,
+							"name": "Perception",
+							"shared": true,
+							"source": {
+								"1": "p. 127"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 0,
+					"wh": {
+						"canEdit": false,
+						"id": "5ce842173ec45d1a88e3323c",
+						"object": {
+							"attribute": 8,
+							"description": "Indicates how good you are in surviving in the wilderness.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": false,
+							"name": "Outdoor Survival",
+							"shared": true,
+							"source": {
+								"1": "p. 126-127"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 7,
+					"wh": {
+						"canEdit": false,
+						"id": "5cdf457530259922e8ea2107",
+						"object": {
+							"attribute": 10,
+							"description": "Allows you to guess how likely someone is to accept a bribe, and how to best offer it.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": false,
+							"name": "Bribery",
+							"shared": true,
+							"source": {
+								"1": "p. 120"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 5,
+					"wh": {
+						"canEdit": false,
+						"id": "5ce842533ec45d1a88e3323d",
+						"object": {
+							"attribute": 2,
+							"description": "Training and experience with weapons from the Bow group.",
+							"displayZero": false,
+							"group": [
+								"5ce46f1e099f0c36546bdddb"
+							],
+							"isGroup": false,
+							"name": "Ranged - Bow",
+							"shared": true,
+							"source": {
+								"1": "p. 128"
+							},
+							"type": 1
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 5,
+					"wh": {
+						"canEdit": false,
+						"id": "5cea891eadaed446d44365e3",
+						"object": {
+							"attribute": 10,
+							"description": "You can use it to entertain people near you with your stories. The SL of the Entertain Test shows how much others like your stories.",
+							"displayZero": false,
+							"group": [
+								"5cea88faadaed446d44365e2",
+								"67267f3549960d00011f3256"
+							],
+							"isGroup": false,
+							"name": "Entertain - Storytelling",
+							"shared": true,
+							"source": {
+								"1": "p. 121"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 0,
+					"wh": {
+						"canEdit": false,
+						"id": "5ce303c497b74e3c4cebdbbf",
+						"object": {
+							"attribute": 4,
+							"description": "Describes how well you endure physical hardships. Endurance is Tested to resist or recover from various Conditions and helps to recover lost Wounds.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": false,
+							"name": "Endurance",
+							"shared": true,
+							"source": {
+								"1": "p. 121"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 5,
+					"wh": {
+						"canEdit": false,
+						"id": "5cadcbf8828dc9389cc7b16a",
+						"object": {
+							"attribute": 10,
+							"description": "Allows to negotiate a better deal.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": false,
+							"name": "Haggle",
+							"shared": true,
+							"source": {
+								"1": "p. 122"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 0,
+					"wh": {
+						"canEdit": false,
+						"id": "5ce305ee97b74e3c4cebdbc0",
+						"object": {
+							"attribute": 1,
+							"description": "Training and experience with a particular type of melee weapon.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": true,
+							"name": "Melee",
+							"shared": true,
+							"source": {
+								"1": "p. 126"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 0,
+					"wh": {
+						"canEdit": false,
+						"id": "5ce8489d3ec45d1a88e33241",
+						"object": {
+							"attribute": 6,
+							"description": "Lets you hide and move undetected in a particular type on environment.  Stealth Test is Opposed by opponent's Perception Skill. The Test is modified by a number of  situational factors such as: lighting condition, your camouflage, etc.\r\nIn combat, Stealth can be used to prepare for an Ambush.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": true,
+							"name": "Stealth",
+							"shared": true,
+							"source": {
+								"1": "p. 130"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 0,
+					"wh": {
+						"canEdit": false,
+						"id": "67267f3549960d00011f3256",
+						"object": {
+							"attribute": 10,
+							"description": "You can use it to entertain people near you with your talents such as stories, songs, acting, etc. The SL of the Entertain Test shows how much others like your performance.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": true,
+							"name": "Entertain - Singing or Storytelling",
+							"shared": true,
+							"source": {
+								"1": "p. 121"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 0,
+					"wh": {
+						"canEdit": false,
+						"id": "6727d4a349960d00013447b1",
+						"object": {
+							"attribute": 7,
+							"description": "Lets you create works of art. To use Art without extra penalties you have to have access to appropriate Trade Tools. Large projects might require extended Tests. SL determines the quality of your work.",
+							"displayZero": true,
+							"group": [],
+							"isGroup": true,
+							"name": "Art - Sculpture or Engraving",
+							"shared": true,
+							"source": {
+								"1": "p. 119"
+							},
+							"type": 0
+						},
+						"ownerId": "admin"
+					}
+				}
+			],
+			"species": "0300",
+			"spells": [],
+			"spentExp": 1195,
+			"standing": 5,
+			"status": 0,
+			"storedItems": [],
+			"talents": [
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": false,
+						"id": "5cea9c1dba626c52981c27a0",
+						"object": {
+							"attribute": 5,
+							"attribute2": 0,
+							"description": "Allows to take Perception Test to detect barely detectable visual details, for example things that are far away, very small, or do not stand out from the background.",
+							"group": [
+								"5cac6e6325ce892b4c4a91a9"
+							],
+							"isGroup": false,
+							"maxRank": 0,
+							"modifiers": {
+								"attributes": {
+									"Ag": 0,
+									"BS": 0,
+									"Dex": 0,
+									"Fel": 0,
+									"I": 0,
+									"Int": 0,
+									"S": 0,
+									"T": 0,
+									"WP": 0,
+									"WS": 0
+								},
+								"effects": [],
+								"movement": 0,
+								"size": 0
+							},
+							"name": "Acute Sense - Sight",
+							"shared": true,
+							"source": {
+								"1": "p. 132"
+							},
+							"tests": "Perception (Sight)"
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": false,
+						"id": "5caddd36a48cc24ecc4eca97",
+						"object": {
+							"attribute": 0,
+							"attribute2": 0,
+							"description": "Permanent +5 bonus to Intelligence Characteristic (Int) that does not count towards Advances.",
+							"group": [],
+							"isGroup": false,
+							"maxRank": 1,
+							"modifiers": {
+								"attributes": {
+									"Ag": 0,
+									"BS": 0,
+									"Dex": 0,
+									"Fel": 0,
+									"I": 0,
+									"Int": 5,
+									"S": 0,
+									"T": 0,
+									"WP": 0,
+									"WS": 0
+								},
+								"effects": [],
+								"movement": 0,
+								"size": 0
+							},
+							"name": "Savvy",
+							"shared": true,
+							"source": {
+								"1": "p. 144"
+							},
+							"tests": ""
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": false,
+						"id": "5ce9e13a0573c70904e2943e",
+						"object": {
+							"attribute": 5,
+							"attribute2": 0,
+							"description": "You can see clearly in the low light conditions (there has to be some faint source of light) for 20 yards per level of Night Vision. \r\nNight Vision extends the effectiveness of any light sources by 20 yards per level.",
+							"group": [],
+							"isGroup": false,
+							"maxRank": 0,
+							"modifiers": {
+								"attributes": {
+									"Ag": 0,
+									"BS": 0,
+									"Dex": 0,
+									"Fel": 0,
+									"I": 0,
+									"Int": 0,
+									"S": 0,
+									"T": 0,
+									"WP": 0,
+									"WS": 0
+								},
+								"effects": [],
+								"movement": 0,
+								"size": 0
+							},
+							"name": "Night Vision",
+							"shared": true,
+							"source": {
+								"1": "p. 141"
+							},
+							"tests": "Perception tests in low-light conditions"
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": false,
+						"id": "5cea9cfbba626c52981c27a1",
+						"object": {
+							"attribute": 5,
+							"attribute2": 0,
+							"description": "If you are approaching a dangerous situation, GM may take a secret Intuition Test for you. If successful, your GM will warn you and you don't get Surprised condition when attacked. ",
+							"group": [],
+							"isGroup": false,
+							"maxRank": 0,
+							"modifiers": {
+								"attributes": {
+									"Ag": 0,
+									"BS": 0,
+									"Dex": 0,
+									"Fel": 0,
+									"I": 0,
+									"Int": 0,
+									"S": 0,
+									"T": 0,
+									"WP": 0,
+									"WS": 0
+								},
+								"effects": [],
+								"movement": 0,
+								"size": 0
+							},
+							"name": "Sixth Sense",
+							"shared": true,
+							"source": {
+								"1": "p. 145"
+							},
+							"tests": "Intuition Tests involving your Sixth Sense"
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": false,
+						"id": "5cadcb0d828dc9389cc7b168",
+						"object": {
+							"attribute": 0,
+							"attribute2": 0,
+							"description": "You can read and write (if appropriate) all of the Languages you can speak.",
+							"group": [],
+							"isGroup": false,
+							"maxRank": 1,
+							"modifiers": {
+								"attributes": {
+									"Ag": 0,
+									"BS": 0,
+									"Dex": 0,
+									"Fel": 0,
+									"I": 0,
+									"Int": 0,
+									"S": 0,
+									"T": 0,
+									"WP": 0,
+									"WS": 0
+								},
+								"effects": [],
+								"movement": 0,
+								"size": 0
+							},
+							"name": "Read/Write",
+							"shared": true,
+							"source": {
+								"1": "p. 142"
+							},
+							"tests": ""
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": false,
+						"id": "5d1875bd23353e73dca2ec5a",
+						"object": {
+							"attribute": 8,
+							"attribute2": 0,
+							"description": "If you achieve Success in Gamble or Sleight of Hand Test playing card games, you may chose to use your unit die roll to determine Test's SL.\r\nIf you play real card games to represent in-game games, you get extra number of cards (per deal) equal your Cardship level, then you discard any cards so that your hand-size remains the same.",
+							"group": [],
+							"isGroup": false,
+							"maxRank": 0,
+							"modifiers": {
+								"attributes": {
+									"Ag": 0,
+									"BS": 0,
+									"Dex": 0,
+									"Fel": 0,
+									"I": 0,
+									"Int": 0,
+									"S": 0,
+									"T": 0,
+									"WP": 0,
+									"WS": 0
+								},
+								"effects": [],
+								"movement": 0,
+								"size": 0
+							},
+							"name": "Cardsharp",
+							"shared": true,
+							"source": {
+								"1": "p. 134"
+							},
+							"tests": "Gamble and Sleight of Hand when playing card games"
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": false,
+						"id": "5d0fc6a0ff5ffa6a34fd1589",
+						"object": {
+							"attribute": 8,
+							"attribute2": 0,
+							"description": "If you achieve Success in Gamble or Sleight of Hand Test playing dice games, you may chose to use your unit die roll to determine Test's SL.\r\nIf you are using real-life dice games to represent in-game games, always roll extra number of rolls equal to the level of Diceman, and chose the best results.",
+							"group": [],
+							"isGroup": false,
+							"maxRank": 0,
+							"modifiers": {
+								"attributes": {
+									"Ag": 0,
+									"BS": 0,
+									"Dex": 0,
+									"Fel": 0,
+									"I": 0,
+									"Int": 0,
+									"S": 0,
+									"T": 0,
+									"WP": 0,
+									"WS": 0
+								},
+								"effects": [],
+								"movement": 0,
+								"size": 0
+							},
+							"name": "Diceman",
+							"shared": true,
+							"source": {
+								"1": "p. 135-136"
+							},
+							"tests": "Gamble and Sleight of Hand when playing dice games"
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": false,
+						"id": "5cadd21e828dc9389cc7b16f",
+						"object": {
+							"attribute": 0,
+							"attribute2": 0,
+							"description": "When Earning or during Income Endeavour add the following per Talent level:\r\nCareer Level 1, +2d10 bp\r\nCareer Level 2, +1d10 ss\r\nCareer Level 3, +2d10 ss\r\nCareer Level 4, +1 gc\r\nYou have visible signs you are a criminal, and others without Criminal Talent consider you lower Status.\r\nAuthorities are always suspicious of you (increasingly with the level of this Talent).\r\nGM can agree to remove levels of this Talent for the same XP it cost to buy.",
+							"group": [],
+							"isGroup": false,
+							"maxRank": 99,
+							"modifiers": {
+								"attributes": {
+									"Ag": 0,
+									"BS": 0,
+									"Dex": 0,
+									"Fel": 0,
+									"I": 0,
+									"Int": 0,
+									"S": 0,
+									"T": 0,
+									"WP": 0,
+									"WS": 0
+								},
+								"effects": [],
+								"movement": 0,
+								"size": 0
+							},
+							"name": "Criminal",
+							"shared": true,
+							"source": {
+								"1": "p. 135"
+							},
+							"tests": ""
+						},
+						"ownerId": "admin"
+					}
+				},
+				{
+					"number": 1,
+					"wh": {
+						"canEdit": false,
+						"id": "5ce1184c0f123f1f14a4cc68",
+						"object": {
+							"attribute": 10,
+							"attribute2": 0,
+							"description": "Rapidly talking nonsense without letting other interrupt you. \r\nLets you attempt Opposed Charm/Intelligence Test. Success gives 1 Stunned Condition for each level of Blather.\r\nIf you stop talking, the affected person loses all Stunned Conditions right away. You attempt this one per person.",
+							"group": [],
+							"isGroup": false,
+							"maxRank": 0,
+							"modifiers": {
+								"attributes": {
+									"Ag": 0,
+									"BS": 0,
+									"Dex": 0,
+									"Fel": 0,
+									"I": 0,
+									"Int": 0,
+									"S": 0,
+									"T": 0,
+									"WP": 0,
+									"WS": 0
+								},
+								"effects": [],
+								"movement": 0,
+								"size": 0
+							},
+							"name": "Blather",
+							"shared": true,
+							"source": {
+								"1": "p. 133-134"
+							},
+							"tests": "Charm to Blather"
+						},
+						"ownerId": "admin"
+					}
+				}
+			],
+			"traits": []
+		},
+		"ownerId": "60927308a1329f415fec9303"
+	}
+}

@@ -1,29 +1,30 @@
 {
-  "id": "template-svelte-esm",
-  "title": "Template Svelte (ESM)",
-  "description": "Provides a bare-bones Foundry module template repo to get set up with using the TyphonJS Runtime Library and Svelte with ES Modules.",
-  "version": "0.0.0",
-  "authors": [
-    {
-      "name": "Michael Leahy (TyphonJS) - MLeahy#4299",
-      "url": "https://www.typhonjs.io",
-      "discord": "MLeahy#4299"
-    }
-  ],
+  "id": "hammergen-foundry-sync-svelte",
+  "name": "hammergen-foundry-sync-svelte",
+  "title": "Hammergen Foundry sync",
+  "description": "tbd.",
+  "version": "0.0.1",
+  "manifestPlusVersion": "1.2.0",
+  "authors": [],
   "compatibility": {
-    "minimum": "10",
-    "verified": "12"
+    "minimum": 10,
+    "verified": 10,
+    "maximum": 11
   },
   "esmodules": [
     "index.js"
   ],
   "styles": [
-    "style.css"
+    "index.css"
   ],
   "flags": {
     "hotReload": {
-      "extensions": ["json"],
-      "paths": ["lang"]
+      "extensions": [
+        "json"
+      ],
+      "paths": [
+        "lang"
+      ]
     }
   },
   "languages": [
@@ -33,14 +34,10 @@
       "path": "lang/en.json"
     }
   ],
-  "socket": false,
-  "url": "https://github.com/typhonjs-fvtt-demo/template-svelte-esm",
-  "readme": "https://github.com/typhonjs-fvtt-demo/template-svelte-esm/blob/master/README.md",
-  "bugs": "https://github.com/typhonjs-fvtt-demo/template-svelte-esm/issues",
-  "changelog": "https://github.com/typhonjs-fvtt-demo/template-svelte-esm/releases/latest/",
-  "manifest": "https://github.com/typhonjs-fvtt-demo/template-svelte-esm/releases/latest/download/module.json",
-  "download": "https://github.com/typhonjs-fvtt-demo/template-svelte-esm/releases/download/0.0.0/module.zip",
-  "protected": false,
-  "coreTranslation": false,
-  "library": false
+  "url": "https://github.com/typhonjs-fvtt-demo/hammergen-foundry-sync-svelte",
+  "readme": "https://github.com/typhonjs-fvtt-demo/hammergen-foundry-sync-svelte/blob/master/README.md",
+  "bugs": "https://github.com/typhonjs-fvtt-demo/hammergen-foundry-sync-svelte/issues",
+  "changelog": "https://github.com/typhonjs-fvtt-demo/hammergen-foundry-sync-svelte/releases/latest/",
+  "manifest": "https://github.com/typhonjs-fvtt-demo/hammergen-foundry-sync-svelte/releases/latest/download/module.json",
+  "download": "https://github.com/typhonjs-fvtt-demo/hammergen-foundry-sync-svelte/releases/download/0.0.0/module.zip"
 }

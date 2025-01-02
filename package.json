@@ -9,11 +9,16 @@
   ],
   "imports": {
     "#runtime/*": "@typhonjs-fvtt/runtime/*",
-    "#standard/*": "@typhonjs-fvtt/standard/*"
+    "#standard/*": "@typhonjs-fvtt/standard/*",
+    "#constants": "./src/constants.js",
+    "#gameSettings": "./src/gameSettings.js"
   },
   "dependencies": {
     "@typhonjs-fvtt/runtime": "^0.2.0-next.6",
     "@typhonjs-fvtt/standard": "^0.2.0-next.3",
+    "vite": ">=5",
+    "@sveltejs/vite-plugin-svelte": ">=3.x.x <4",
+    "svelte-preprocess": ">=6",
     "svelte": "^4.2.19"
   },
   "devDependencies": {
@@ -21,7 +26,10 @@
     "@typhonjs-fvtt/eslint-config-foundry.js": "^0.8.0",
     "eslint": "^8"
   },
-  "browserslist": [">5%", "not IE 11"],
+  "browserslist": [
+    ">5%",
+    "not IE 11"
+  ],
   "scripts": {
     "build": "vite build",
     "dev": "vite",
