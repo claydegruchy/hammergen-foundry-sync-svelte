@@ -1,4 +1,4 @@
-import { downloadAttribs } from "./hammergen-api"
+import { downloadAttribs, getMappingTable } from "./hammergen-api"
 
 
 
@@ -20,230 +20,184 @@ let findType = (foundryType) => {
 
 export async function hammergenCharacterToFoundryActor(hammergenChar, foundryActor) {
 
-
-	const formatName = str => str.trim().toLocaleLowerCase().replace(/[^a-zA-Z]/g, "")
-
+	console.log("starting hammergenCharacterToFoundryActor", "copying from", hammergenChar, "to", foundryActor)
 
 
+	// these are the fields we should attempt to extract from
+	const hammergenCharItemFields = [
+		"carriedItems",
+		"equippedItems",
+		"mutations",
+		"prayers",
+		"skills",
+		"spells",
+		"storedItems",
+		"talents",
+		"traits",
+	]
+
+	// other "special" fields that need consideration
+	// name
+	// notes
+	// "careerPath",
+	// fate
+	// fortune
+	// resilience
+	// resolve
+	// sin
+	// corruption
+
+	// spentExp
+	// currentExp
+
+	// species
+	// standing
+	// status
+
+	// 	brass
+	// silver
+	// gold
+
+	// done
+
+
+	let uiFeedback = []
+
+
+	const mappingTable = await getMappingTable()
 
 	let cache = await downloadAttribs()
 
 
-	let map = {}
-	let tableH = []
-	let tableF = []
-
-	// console.log([...new Set(game.items.map(item => item.type))])
-
-	console.log("starting", cache)
-	for (let [type, hammerItems] of Object.entries(cache)) {
-
-
-		let foundryItems = game.items.filter((item, i) => findType(item.type) == type)
-
-
-		console.log("starting", type, foundryItems.length, hammerItems.length)
-		map[type] = { found: [], notFound: [], skipped: [], hammerItemsUnallocated: hammerItems, foundryItemsUnallocated: foundryItems }
-
-		// for (const hammerItem of hammerItems) {
-		// 	if (!hammerItem.source.hasOwnProperty("1")) {
-		// 		map[type].skipped.push(formatName(hammerItem.name))
-		// 		continue
-		// 	}
+	console.log("starting map", cache, mappingTable)
 
 
 
+	console.group("inital preperation")
 
-		// 	let match = foundryItems.find(foundryItem => formatName(hammerItem.name) == formatName(foundryItem.name))
-		// 	if (match) {
-		// 		// console.log("match", hammerItem.name, match.name)
-		// 		map[type].found.push(formatName(hammerItem.name))
-		// 		map[type].hammerItemsUnallocated = map[type].hammerItemsUnallocated.filter(item => item.name != formatName(hammerItem.name))
-		// 		map[type].foundryItemsUnallocated = map[type].foundryItemsUnallocated.filter(item => item.name != formatName(hammerItem.name))
+	console.log("removing old items", foundryActor.items)
+	if (foundryActor.items) {
 
-		// 	} else {
-		// 		// console.error("match not found", hammerItem.name, match)
-		// 		map[type].notFound.push(formatName(hammerItem.name))
-		// 	}
-
-
-
-		// }
-		// let hammerItemsUnallocated = [...map[type].hammerItemsUnallocated]
-		// let foundryItemsUnallocated = [...map[type].foundryItemsUnallocated]
-
-
-
-
-
-		let h = hammerItems.map(item => ([
-			item.name,
-			item.id,
-			type,
-			item.source?.["1"] || "not in rulebook",
-			"hammergen"
-		]))
-
-		let f = foundryItems.map(item => ([
-			item.name,
-			item.id,
-			type,
-			"foundry"
-		]))
-		// let l = hammerItems.length
-		// if (foundryItems >= hammerItems) l = foundryItems.length
-
-		// console.log(hammerItems)
-		// for (let index = 0; index < l; index++) {
-		// 	let hammerItem = hammerItems.pop()
-		// 	let foundryItem = foundryItems.pop()
-
-
-		// 	table.push([
-
-		// 		hammerItem?.name,
-		// 		hammerItem?.id,
-		// 		type,
-		// 		hammerItem?.source["1"] || "not in rulebook",
-
-		// 		foundryItem?.name,
-		// 		foundryItem?.id,
-		// 		type,
-		// 	])
-
-
-
-		// 	// for (const item of items) {
-		// 	// 	if (item.name == )
-		// 	// }
-		// 	// if (items.length < 1) console.log("no real", type)
-		// }
-		tableH = tableH.concat(h)
-		tableF = tableF.concat(f)
+		await foundryActor.deleteEmbeddedDocuments("Item", foundryActor.items.filter(n => n.type != "container").map(n => n.id))
+		try {
+			await foundryActor.deleteEmbeddedDocuments("Item", foundryActor.items.filter(n => n.type == "container").map(n => n.id))
+		} catch (error) {
+			if (foundryActor.items.filter(n => n.type == "container".length > 0)) {
+				uiFeedback.push(`Error: Due to Foundry version compatibility issues, bags cannot be deleted automatically with WFRP4e. Sadly, you must update to version 12 and the latest WFRP version to fix this.`)
+			}
+		}
 
 	}
-
-	// console.table(table)
-	console.log(tableH, tableH.length)
-	console.log(tableF, tableF.length)
+	console.groupEnd("inital preperation")
 
 
 
+	console.group("mapping")
 
 
+	let characteristicUpdates = {}
 
 
-
-
-	let itemsToFind = []
-
-
-
-
-
-	// if(source[1])
-
-	return
-
-
-	// get actor
-	console.log("loaded foundry actor", foundryActor)
-
-
-
-	// get character
-	console.log("loaded hmmergen character", hammergenChar)
-
-	// perform map
-	// update object
-	let updateObject = {
-		name: hammergenChar.name
-	}
+	console.group("base characteristics")
 	// base characteristics
 	for (const [k, v] of Object.entries(hammergenChar.baseAttributes)) {
-		updateObject["data.characteristics." + k.toLocaleLowerCase() + ".initial"] = v
+		console.log("updating", k)
+		characteristicUpdates["data.characteristics." + k.toLocaleLowerCase() + ".initial"] = v
 	}
+	console.groupEnd("base characteristics")
 
+	console.group("characteristic advances")
 	// characteristic advances
 	for (const [k, v] of Object.entries(hammergenChar.attributeAdvances)) {
-		updateObject["data.characteristics." + k.toLocaleLowerCase() + ".advances"] = v
+		console.log("updating", k)
+		characteristicUpdates["data.characteristics." + k.toLocaleLowerCase() + ".advances"] = v
 	}
-
-	let mappingTable = {}
-	let warnings = []
-	// skills
-	let skillsToAdd = []
+	console.groupEnd("characteristic advances")
 
 
 
 
-	return
-	for (const { number, wh: { id, object: { name } } } of hammergenChar.skills) {
 
-
-		let skill = game.items.filter((item, i) => item.type == "skill")
-			.find(item => item.name.trim() == name.trim())
-
-
-		if (skill) {
-			// console.log("found", name)
-			skillsToAdd.push(skill)
-			mappingTable[id] = skill.id
-		} else {
-			console.error("skill not found", id, name,)
-			warnings.push(`Couldnt find ${name}`)
-			console.log("starting fuzzy search")
-			// name.replace(/[^a-zA-Z\s]/g, "").split(" ")
-
-		}
-
-		// loop up local value here
-	}
-
-	// let exampleSkill = "Outdoor Survival"
-
-
-	console.log(mappingTable)
-
-
-	//    targetActor.update({ [path]: 10 });
-
-
-	// get current talents
-	// console.log(updateObject, foundryActor.itemCategories.talent)
+	console.group("mapping itemlikes")
 
 
 
 
-	// let path = "data.characteristics.ag.initial";
-	// let strength = getProperty(foundryActor.data, path); // Safely fetches the value
-	// console.log({ strength, path })
+	for (const field of hammergenCharItemFields) {
 
+		console.group(field)
 
-	function validator(ud) {
-		// return
-		console.group("pathCheck")
+		let items = []
+		let quantities = []
 
-		// validate
-		for (const [path, val] of Object.entries(ud)) {
-			const found = getProperty(foundryActor.data, path)
-			if (found != 0 && !found) {
-				console.error("path not found", path, val)
-			} else {
-				console.log("path found", path, found)
+		for (const { number, wh: { id, object: { name } } } of hammergenChar[field]) {
+			const mappedFoundryItem = mappingTable.find(item => item.HammergenId == id)
 
+			if (!mappedFoundryItem) {
+				uiFeedback.push(`Not Added: Could not find "${name}" with ID ${id} in mapping table.`)
+				continue
 			}
 
+			let {
+				FoundryId,
+				HammergenId,
+				Note, Name
+			} = mappedFoundryItem
+
+			const foundryItem = game.items.find(item => item.id == FoundryId)
+
+			if (!foundryItem) {
+				uiFeedback.push(`Not Added: Could not find "${name}" with ID ${id} in foundry (mapping table may be out of date).`)
+				continue
+			}
+
+			console.log("Adding", Name, FoundryId)
+
+
+			if (Note != "") {
+				uiFeedback.push(`Added: "${Name}" Note: ${Note}`)
+			}
+
+			items.push(foundryItem)
+			quantities.push(number)
+
 		}
-		console.groupEnd()
+
+		try {
+			console.group("bulk adding itemlikes")
+			console.log("adding", items.length, "items")
+			const addedItems = await foundryActor.createEmbeddedDocuments("Item", items);
+			addedItems.forEach((item, i) => {
+				// different items need to have their quantity increased in different ways
+				if (getProperty(item, "system.advances")) item.update({ "system.advances": { force: true, value: quantities[i] } })
+				if (getProperty(item, "system.quantity.value")) item.update({ "system.quantity.value": quantities[i] })
+			})
+
+		} catch (error) {
+			console.error(error)
+		}
+		console.groupEnd("bulk adding itemlikes")
+
+
+		console.groupEnd(field)
 	}
-	// validator(updateObject)
+
+
+	// adding money
 
 
 
-	// console.log("updating actor...", foundryActor.data)
-	// foundryActor.update(updateObject);
-	// console.log("update complete", foundryActor.data)
+
+	console.groupEnd("mapping itemlikes")
+	console.groupEnd("mapping")
+	console.table(uiFeedback)
+
+
+
+
+	console.group("updating characteristics")
+	foundryActor.update(characteristicUpdates);
+	console.groupEnd("updating characteristics")
 
 
 
@@ -253,7 +207,7 @@ export async function hammergenCharacterToFoundryActor(hammergenChar, foundryAct
 	//    let path = "data.characteristics.ag.initial";
 	//    let strength = getProperty(targetActor.data, path); // Safely fetches the value
 
-	//    targetActor.update("data.characteristics.vs.value", 1);
+	//    targetActor.update("data.characteristics.vs.value", 1); // safely updates value
 
 	//    let actor = game.actors.get(targetActor.id); // Replace with actual actor ID
 	//    targetActor.update({ [path]: 10 });

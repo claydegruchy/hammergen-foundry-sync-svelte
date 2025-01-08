@@ -18,7 +18,8 @@
       foundryActors = [...game.actors];
       hammergenCharacters = await getCharacters();
    }
-   let targetActor = [...game.actors][0];
+   let targetActor = game.actors.get("7ljsyrc2C1haA3io")
+
 
    async function sync() {
       hammergenCharacterToFoundryActor(await getCharacter("800000000000000000000001"), targetActor);
@@ -26,8 +27,6 @@
    sync();
 
    //    console.log(targetActor.name, targetActor.data.data.characteristics);
-
-
 
    // Update the strength value
    //    actor.update({
