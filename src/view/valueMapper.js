@@ -2,10 +2,24 @@ import { downloadAttribs } from "./hammergen-api"
 
 
 
+let foundryTypeMap = {
+	trapping: "item",
+	ammunition: "item",
+	container: "item",
+	weapon: "item",
+	armour: "item",
+}
+
+
+const careerMapper = hammergenCareer => { }
+
+let findType = (foundryType) => {
+	return foundryTypeMap[foundryType] || foundryType
+}
+
+
 export async function hammergenCharacterToFoundryActor(hammergenChar, foundryActor) {
-	// if (Object.keys(cache).length < 1) {
-	// 	await downloadAttribs()
-	// }
+
 
 	const formatName = str => str.trim().toLocaleLowerCase().replace(/[^a-zA-Z]/g, "")
 
@@ -16,43 +30,102 @@ export async function hammergenCharacterToFoundryActor(hammergenChar, foundryAct
 
 
 	let map = {}
+	let tableH = []
+	let tableF = []
 
-	let i = 0
-	console.log("starting")
+	// console.log([...new Set(game.items.map(item => item.type))])
+
+	console.log("starting", cache)
 	for (let [type, hammerItems] of Object.entries(cache)) {
-		if (type == "item") type = "trapping"
-		let foundryItems = game.items.filter((item, i) => item.type == type)
+
+
+		let foundryItems = game.items.filter((item, i) => findType(item.type) == type)
+
+
 		console.log("starting", type, foundryItems.length, hammerItems.length)
-		map[type] = { found: [], notFound: [], skipped: [], hammerItemsTotal: hammerItems.length, foundryItemsTotal: foundryItems.length }
+		map[type] = { found: [], notFound: [], skipped: [], hammerItemsUnallocated: hammerItems, foundryItemsUnallocated: foundryItems }
 
-		for (const hammerItem of hammerItems) {
-			let skip = false
-			if (skip) continue
-			if (!hammerItem.source[1]) {
-				map[type].skipped.push(formatName(hammerItem.name))
-				continue
-			}
-			let match = foundryItems.find(foundryItem => formatName(hammerItem.name) == formatName(foundryItem.name))
-			if (match) {
-				// console.log("match", hammerItem.name, match.name)
-				map[type].found.push(formatName(hammerItem.name))
-
-			} else {
-				// console.error("match not found", hammerItem.name, match)
-				map[type].notFound.push(formatName(hammerItem.name))
-			}
+		// for (const hammerItem of hammerItems) {
+		// 	if (!hammerItem.source.hasOwnProperty("1")) {
+		// 		map[type].skipped.push(formatName(hammerItem.name))
+		// 		continue
+		// 	}
 
 
 
-		}
+
+		// 	let match = foundryItems.find(foundryItem => formatName(hammerItem.name) == formatName(foundryItem.name))
+		// 	if (match) {
+		// 		// console.log("match", hammerItem.name, match.name)
+		// 		map[type].found.push(formatName(hammerItem.name))
+		// 		map[type].hammerItemsUnallocated = map[type].hammerItemsUnallocated.filter(item => item.name != formatName(hammerItem.name))
+		// 		map[type].foundryItemsUnallocated = map[type].foundryItemsUnallocated.filter(item => item.name != formatName(hammerItem.name))
+
+		// 	} else {
+		// 		// console.error("match not found", hammerItem.name, match)
+		// 		map[type].notFound.push(formatName(hammerItem.name))
+		// 	}
 
 
-		// for (const item of items) {
-		// 	if (item.name == )
+
 		// }
-		// if (items.length < 1) console.log("no real", type)
+		// let hammerItemsUnallocated = [...map[type].hammerItemsUnallocated]
+		// let foundryItemsUnallocated = [...map[type].foundryItemsUnallocated]
+
+
+
+
+
+		let h = hammerItems.map(item => ([
+			item.name,
+			item.id,
+			type,
+			item.source?.["1"] || "not in rulebook",
+			"hammergen"
+		]))
+
+		let f = foundryItems.map(item => ([
+			item.name,
+			item.id,
+			type,
+			"foundry"
+		]))
+		// let l = hammerItems.length
+		// if (foundryItems >= hammerItems) l = foundryItems.length
+
+		// console.log(hammerItems)
+		// for (let index = 0; index < l; index++) {
+		// 	let hammerItem = hammerItems.pop()
+		// 	let foundryItem = foundryItems.pop()
+
+
+		// 	table.push([
+
+		// 		hammerItem?.name,
+		// 		hammerItem?.id,
+		// 		type,
+		// 		hammerItem?.source["1"] || "not in rulebook",
+
+		// 		foundryItem?.name,
+		// 		foundryItem?.id,
+		// 		type,
+		// 	])
+
+
+
+		// 	// for (const item of items) {
+		// 	// 	if (item.name == )
+		// 	// }
+		// 	// if (items.length < 1) console.log("no real", type)
+		// }
+		tableH = tableH.concat(h)
+		tableF = tableF.concat(f)
+
 	}
-	console.log(map)
+
+	// console.table(table)
+	console.log(tableH, tableH.length)
+	console.log(tableF, tableF.length)
 
 
 

@@ -1,0 +1,483 @@
+{
+	"name": "import test2",
+	"type": "npc",
+	"img": "systems/wfrp4e/tokens/unknown.png",
+	"system": {
+		"characteristics": {
+			"ws": {
+				"type": "number",
+				"label": "CHAR.WS",
+				"abrev": "CHARAbbrev.WS",
+				"initial": 30,
+				"modifier": 0,
+				"advances": 0,
+				"bonusMod": 0,
+				"calculationBonusModifier": 0
+			},
+			"bs": {
+				"type": "Number",
+				"label": "CHAR.BS",
+				"abrev": "CHARAbbrev.BS",
+				"initial": 31,
+				"modifier": 0,
+				"advances": 0,
+				"bonusMod": 0,
+				"calculationBonusModifier": 0
+			},
+			"s": {
+				"type": "Number",
+				"label": "CHAR.S",
+				"abrev": "CHARAbbrev.S",
+				"initial": 32,
+				"modifier": 0,
+				"advances": 5,
+				"bonusMod": 0,
+				"calculationBonusModifier": 0
+			},
+			"t": {
+				"type": "Number",
+				"label": "CHAR.T",
+				"abrev": "CHARAbbrev.T",
+				"initial": 30,
+				"modifier": 0,
+				"advances": 5,
+				"bonusMod": 0,
+				"calculationBonusModifier": 0
+			},
+			"i": {
+				"type": "Number",
+				"label": "CHAR.I",
+				"abrev": "CHARAbbrev.I",
+				"initial": 32,
+				"modifier": 0,
+				"advances": 0,
+				"bonusMod": 0,
+				"calculationBonusModifier": 0
+			},
+			"ag": {
+				"type": "Number",
+				"label": "CHAR.Ag",
+				"abrev": "CHARAbbrev.Ag",
+				"initial": 31,
+				"modifier": 0,
+				"advances": 5,
+				"bonusMod": 0,
+				"calculationBonusModifier": 0
+			},
+			"dex": {
+				"type": "Number",
+				"label": "CHAR.Dex",
+				"abrev": "CHARAbbrev.Dex",
+				"initial": 30,
+				"modifier": 0,
+				"advances": 0,
+				"bonusMod": 0,
+				"calculationBonusModifier": 0
+			},
+			"int": {
+				"type": "Number",
+				"label": "CHAR.Int",
+				"abrev": "CHARAbbrev.Int",
+				"initial": 32,
+				"modifier": 0,
+				"advances": 0,
+				"bonusMod": 0,
+				"calculationBonusModifier": 0
+			},
+			"wp": {
+				"type": "Number",
+				"label": "CHAR.WP",
+				"abrev": "CHARAbbrev.WP",
+				"initial": 30,
+				"modifier": 0,
+				"advances": 0,
+				"bonusMod": 0,
+				"calculationBonusModifier": 0
+			},
+			"fel": {
+				"type": "Number",
+				"label": "CHAR.Fel",
+				"abrev": "CHARAbbrev.Fel",
+				"initial": 30,
+				"modifier": 0,
+				"advances": 0,
+				"bonusMod": 0,
+				"calculationBonusModifier": 0
+			}
+		},
+		"status": {
+			"wounds": {
+				"type": "Number",
+				"label": "Wounds",
+				"abrev": "W",
+				"value": 15,
+				"max": 15
+			},
+			"advantage": {
+				"type": "Number",
+				"label": "Advantage",
+				"value": 0,
+				"max": 10
+			},
+			"criticalWounds": {
+				"type": "Number",
+				"label": "Critical Wounds",
+				"value": 0,
+				"max": 2
+			},
+			"sin": {
+				"type": "Number",
+				"label": "Sin",
+				"value": "0"
+			},
+			"penalties": {
+				"type": "String",
+				"label": "Penalties",
+				"value": ""
+			},
+			"corruption": {
+				"type": "Number",
+				"label": "Corruption",
+				"value": 0
+			},
+			"encumbrance": {
+				"type": "Number",
+				"label": "Encumbrance",
+				"max": 0,
+				"current": 0
+			},
+			"mount": {
+				"id": "",
+				"mounted": false,
+				"isToken": false,
+				"tokenData": {
+					"scene": "",
+					"token": ""
+				}
+			}
+		},
+		"details": {
+			"species": {
+				"type": "String",
+				"label": "Species",
+				"value": "Human",
+				"subspecies": ""
+			},
+			"gender": {
+				"type": "String",
+				"label": "Gender",
+				"value": ""
+			},
+			"biography": {
+				"type": "String",
+				"label": "Biography",
+				"value": ""
+			},
+			"gmnotes": {
+				"type": "String",
+				"label": "GM Notes",
+				"value": ""
+			},
+			"size": {
+				"type": "String",
+				"label": "Size",
+				"value": "avg"
+			},
+			"move": {
+				"type": "Number",
+				"label": "Movement",
+				"value": 4,
+				"walk": 0,
+				"run": 0
+			},
+			"god": {
+				"type": "String",
+				"label": "God",
+				"value": ""
+			},
+			"status": {
+				"type": "String",
+				"value": "Brass 2",
+				"standing": "",
+				"tier": 0,
+				"modifier": 0
+			},
+			"hitLocationTable": {
+				"value": "hitloc",
+				"type": "String",
+				"label": "Hit Location Table"
+			}
+		}
+	},
+	"prototypeToken": {
+		"name": "test",
+		"displayName": 20,
+		"actorLink": false,
+		"appendNumber": false,
+		"prependAdjective": false,
+		"texture": {
+			"src": "systems/wfrp4e/tokens/unknown.png",
+			"scaleX": 1,
+			"scaleY": 1,
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0
+		},
+		"width": 1,
+		"height": 1,
+		"lockRotation": false,
+		"rotation": 0,
+		"alpha": 1,
+		"disposition": 0,
+		"displayBars": 20,
+		"bar1": {
+			"attribute": "status.wounds"
+		},
+		"bar2": {
+			"attribute": "status.advantage"
+		},
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"bright": 0,
+			"coloration": 1,
+			"dim": 0,
+			"attenuation": 0.5,
+			"luminosity": 0.5,
+			"saturation": 0,
+			"contrast": 0,
+			"shadows": 0,
+			"animation": {
+				"type": null,
+				"speed": 5,
+				"intensity": 5,
+				"reverse": false
+			},
+			"darkness": {
+				"min": 0,
+				"max": 1
+			}
+		},
+		"sight": {
+			"enabled": false,
+			"range": 0,
+			"angle": 360,
+			"visionMode": "basic",
+			"attenuation": 0.1,
+			"brightness": 0,
+			"saturation": 0,
+			"contrast": 0
+		},
+		"detectionModes": [],
+		"flags": {},
+		"randomImg": false
+	},
+	"items": [
+		{
+			"name": "Peasant",
+			"type": "career",
+			"img": "modules/wfrp4e-core/icons/careers/villager-01.png",
+			"effects": [],
+			"folder": "dmeXXc2Fvthp6IZR",
+			"sort": 23200000,
+			"flags": {},
+			"system": {
+				"description": {
+					"type": "String",
+					"label": "Description",
+					"value": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.EYkvtokq0FXlFaPa]{Villager}</p>"
+				},
+				"gmdescription": {
+					"type": "String",
+					"label": "Description",
+					"value": ""
+				},
+				"careergroup": {
+					"type": "String",
+					"label": "Career Group",
+					"value": "Villager"
+				},
+				"class": {
+					"type": "String",
+					"label": "Class",
+					"value": "Peasants"
+				},
+				"current": {
+					"type": "Boolean",
+					"value": false
+				},
+				"complete": {
+					"type": "Boolean",
+					"value": true
+				},
+				"level": {
+					"type": "String",
+					"label": "Career Level",
+					"value": "1"
+				},
+				"status": {
+					"tier": "b",
+					"standing": 2
+				},
+				"characteristics": [
+					"s",
+					"t",
+					"ag"
+				],
+				"skills": [
+					"Animal Care",
+					"Athletics",
+					"Consume Alcohol",
+					"Endurance",
+					"Gossip",
+					"Melee (Brawling)",
+					"Lore (Local)",
+					"Outdoor Survival"
+				],
+				"talents": [
+					"Rover",
+					"Strong Back",
+					"Strong-minded",
+					"Stone Soup"
+				],
+				"trappings": [
+					"None"
+				],
+				"incomeSkill": [
+					3
+				],
+				"source": {
+					"type": "String",
+					"label": "Source"
+				}
+			},
+			"ownership": {
+				"default": 0,
+				"sAiwDCZFd21tgaDN": 3
+			},
+			"_stats": {
+				"systemId": "wfrp4e",
+				"systemVersion": "7.0.3",
+				"coreVersion": "11.315",
+				"createdTime": 1691215526544,
+				"modifiedTime": 1735813312945,
+				"lastModifiedBy": "2m2o7CUg5TZ0zE22"
+			},
+			"_id": "4YuqbELDrplFE1FA"
+		},
+		{
+			"_id": "IKD8LgHg9G2PwXHo"
+		},
+		{
+			"_id": "PY8geCQQ3TQqHvFm"
+		},
+		{
+			"_id": "kQ3Ep2jbVAjIwKSL"
+		},
+		{
+			"_id": "oNAqHtxpao0uWh9j"
+		},
+		{
+			"_id": "s8uPFj5Erg9PnrYe"
+		},
+		{
+			"_id": "pecwui88wAWUilAq"
+		},
+		{
+			"_id": "ROVgfNgGpaJtBSj4"
+		},
+		{
+			"_id": "ARBUD32WbEUrolyU"
+		},
+		{
+			"_id": "dIl7aMBotRmi30Md"
+		},
+		{
+			"_id": "hu2K5AafSpEZWypk"
+		},
+		{
+			"_id": "On9LdIJSQfVdAOVs"
+		},
+		{
+			"_id": "bwxsUn8aRxLycXVo"
+		},
+		{
+			"_id": "dAxXRs2E2asndfQ4"
+		},
+		{
+			"_id": "e9exWTDN24q1JwHX"
+		},
+		{
+			"_id": "DomxUXxHLF99hABL"
+		},
+		{
+			"_id": "VQKOdC2rNDN66x6C"
+		},
+		{
+			"_id": "rFqMT9n85sQh4ax3"
+		},
+		{
+			"_id": "mCzvJjBEJRUGEf1E"
+		},
+		{
+			"_id": "fb6V7SlD8DzCvSIG"
+		},
+		{
+			"_id": "AH0FuFETXYuf0ESh"
+		},
+		{
+			"_id": "eqQeB0ylFjQS5RJi"
+		},
+		{
+			"_id": "18UNKa5SflcMnkHg"
+		},
+		{
+			"_id": "7T7fTM2b5FeNPEzC"
+		},
+		{
+			"_id": "jioiGE4qFMOmK5sr"
+		},
+		{
+			"_id": "lIQYQAQlxTSwnjV2"
+		},
+		{
+			"_id": "31lZtilJb9sKffvq"
+		},
+		{
+			"_id": "wTbp3LxcO8klZ0f9"
+		},
+		{
+			"_id": "VfimyBzdBsrmzNRh"
+		},
+		{
+			"_id": "UTE3Fh1iD5B7WPgk"
+		},
+		{
+			"_id": "uVd28os97Dkbh8da"
+		}
+	],
+	"folder": null,
+	"flags": {
+		"autoCalcRun": true,
+		"autoCalcWalk": true,
+		"autoCalcWounds": true,
+		"autoCalcCritW": true,
+		"autoCalcCorruption": true,
+		"autoCalcEnc": true,
+		"autoCalcSize": true,
+		"exportSource": {
+			"world": "test",
+			"system": "wfrp4e",
+			"coreVersion": "11.315",
+			"systemVersion": "7.0.3"
+		}
+	},
+	"_stats": {
+		"systemId": "wfrp4e",
+		"systemVersion": "7.0.3",
+		"coreVersion": "11.315",
+		"createdTime": 1735813312808,
+		"modifiedTime": 1735827302194,
+		"lastModifiedBy": "QMgRtaxlYMZaedqj"
+	}
+}

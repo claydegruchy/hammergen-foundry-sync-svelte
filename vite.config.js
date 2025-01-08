@@ -1,11 +1,15 @@
 /* eslint-env node */
-import { svelte }             from '@sveltejs/vite-plugin-svelte';
+import { svelte } from '@sveltejs/vite-plugin-svelte';
 
 import {
    postcssConfig,
-   terserConfig }             from '@typhonjs-fvtt/runtime/rollup';
+   terserConfig
+} from '@typhonjs-fvtt/runtime/rollup';
 
-import { sveltePreprocess }   from 'svelte-preprocess';
+import { sveltePreprocess } from 'svelte-preprocess';
+
+import dsv from '@rollup/plugin-dsv'
+
 
 // ATTENTION!
 // Please modify the below variables: s_PACKAGE_ID and s_SVELTE_HASH_ID appropriately.
@@ -22,8 +26,7 @@ const s_SVELTE_HASH_ID = 'hfss';
 const s_COMPRESS = false;  // Set to true to compress the module bundle.
 const s_SOURCEMAPS = true; // Generate sourcemaps for the bundle (recommended).
 
-export default ({ mode }) =>
-{
+export default ({ mode }) => {
    // Provides a custom hash adding the string defined in `s_SVELTE_HASH_ID` to scoped Svelte styles;
    // This is reasonable to do as the framework styles in TRL compiled across `n` different packages will
    // be the same. Slightly modifying the hash ensures that your package has uniquely scoped styles for all
@@ -102,7 +105,8 @@ export default ({ mode }) =>
          svelte({
             compilerOptions,
             preprocess: sveltePreprocess()
-         })
+         }),
+         dsv(),
       ]
    };
 };
