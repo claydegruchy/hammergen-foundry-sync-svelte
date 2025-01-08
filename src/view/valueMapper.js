@@ -36,29 +36,7 @@ export async function hammergenCharacterToFoundryActor(hammergenChar, foundryAct
 		"traits",
 	]
 
-	// other "special" fields that need consideration
-	// name
-	// notes
-	// "careerPath",
-	// fate
-	// fortune
-	// resilience
-	// resolve
-	// sin
-	// corruption
 
-	// spentExp
-	// currentExp
-
-	// species
-	// standing
-	// status
-
-	// 	brass
-	// silver
-	// gold
-
-	// done
 
 
 	let uiFeedback = []
@@ -190,7 +168,6 @@ export async function hammergenCharacterToFoundryActor(hammergenChar, foundryAct
 
 	console.groupEnd("mapping itemlikes")
 	console.groupEnd("mapping")
-	console.table(uiFeedback)
 
 
 
@@ -198,6 +175,88 @@ export async function hammergenCharacterToFoundryActor(hammergenChar, foundryAct
 	console.group("updating characteristics")
 	foundryActor.update(characteristicUpdates);
 	console.groupEnd("updating characteristics")
+
+
+
+	// other "special" fields that need consideration
+	// hammergenChar, foundryActor
+	console.log("careerPath")
+	// the archetecture of the chareer system in hammergen is such that the SECOND career level is the naming career, and that the other careers are nested under that.
+	// while accurate to the books, this is pretty hard for a mapping tool maker to unpick
+	hammergenChar.career.current = true
+
+	for (const { current, number, wh: { id, object: { name } } } of [...hammergenChar.careerPath, hammergenChar.career,]) {
+		console.log(number, id, name, current)
+		const mappedFoundryItem = mappingTable.find(item => item.HammergenId == id)
+
+		let {
+			FoundryId,
+			HammergenId,
+			Note, Name
+		} = mappedFoundryItem
+
+		const foundryItem = game.items.find(item => item.id == FoundryId)
+
+		const relatedCareers = game.items.filter(n => n.type == "career").filter(n => n.careergroup.value == foundryItem.careergroup.value)
+		const mappedCareer = relatedCareers.find(n => n.system.level.value == number)
+		if (!mappedCareer) {
+			uiFeedback.push(`Not Added: Career ${name} level ${number} could not be found in Foundry`)
+		}
+
+		console.log(foundryItem, mappedCareer.name)
+		const [item] = await foundryActor.createEmbeddedDocuments("Item", [mappedCareer]);
+		console.log(item, getProperty(item, "current.value"))
+		if (current) {
+			// current
+			console.log("setting as current career", item.name)
+			await item.update({ "system.current.value": true })
+			// await item.update({ "current": { value: true } })
+		}
+		else {
+			// complete
+			console.log("setting as complete career", item.name)
+			await item.update({ "system.complete": { value: true } })
+
+		}
+		// game.items.filter(item => item.)
+
+	}
+	console.log(foundryActor)
+
+
+	console.log("name")
+	await foundryActor.update({ "name": hammergenChar.name + Math.random() })
+
+	console.log("notes", hammergenChar.notes)
+	await foundryActor.update({ "system.details.gmnotes.value": `<p>${hammergenChar.notes}</p>` })
+	console.log("description", hammergenChar.notes)
+	console.log("fate", hammergenChar.fate)
+	await foundryActor.update({ "system.status.fate.value": hammergenChar.fate })
+	console.log("fortune", hammergenChar.fortune)
+	await foundryActor.update({ "system.status.fortune.value": hammergenChar.fortune })
+	console.log("resilience", hammergenChar.resilience)
+	await foundryActor.update({ "system.status.resilience.value": hammergenChar.resilience })
+	console.log("resolve", hammergenChar.resolve)
+	await foundryActor.update({ "system.status.resolve.value": hammergenChar.resolve })
+	console.log("sin", hammergenChar.sin)
+	await foundryActor.update({ "system.status.sin.value": hammergenChar.sin })
+	console.log("corruption", hammergenChar.corruption)
+	await foundryActor.update({ "system.status.corruption.value": hammergenChar.corruption })
+	console.log("spentExp", "currentExp")
+	await foundryActor.update({
+		"system.details.experience": {
+			spent: hammergenChar.spentExp,
+			total: hammergenChar.currentExp + hammergenChar.spentExp,
+			force: true
+		}
+	})
+	// console.log("species")
+	// console.log("standing")
+	// console.log("money")
+	// console.log("brass")
+	// console.log("silver")
+	// console.log("gold")
+
 
 
 
