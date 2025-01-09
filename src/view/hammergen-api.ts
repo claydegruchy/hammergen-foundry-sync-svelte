@@ -1,10 +1,47 @@
+import { get } from "svelte/store";
+import { gameSettings } from "./gameSettings.js";
+
 const base = "https://hammergen-production-waxikk2naa-ew.a.run.app/api/wh/"
 // const base = "http://127.0.0.1:8082/api/wh/"
 const cache = {}
 
+// console.log(gameSettings.getStore("apiKey"),"")
+
+export async function loginToHammergen(username, password) {
+	console.log("Starting", "loginToHammergen")
+
+	// cant just login, need to do this shit as it uses a form
+	// var formData = new FormData()
+	// formData.append('myfile', file, 'someFileName.csv')
+
+
+	const { accessToken } = await fetch("https://hammergen-production-waxikk2naa-ew.a.run.app/api/token", {
+		method: "post",
+		headers: {
+			Authorization: "Basic " + btoa(username + ":" + password),
+		},
+	}).then(r => r.json())
+
+
+	if (accessToken) {
+		const apiKey = gameSettings.getStore("apiKey")
+		apiKey.set(accessToken)
+		return true
+	}
+	return false
+}
 
 async function hammergenApiWrapper(path) {
-	const response = await fetch(base + path).then(r => r.json())
+	console.log("Starting", "hammergenApiWrapper", base + path)
+
+	const apiKey = get(gameSettings.getStore("apiKey"));
+	console.log({ apiKey })
+	let options = {}
+	if (apiKey) {
+		options = { headers: { Authorization: 'Bearer ' + apiKey } }
+	}
+
+	const response = await fetch(base + path, options).then(r => r.json())
 	console.log(response)
 	if (Array.isArray(response.data)) {
 		return response.data.map(item => ({ id: item.id, ...item.object }))
@@ -13,43 +50,10 @@ async function hammergenApiWrapper(path) {
 	}
 }
 
-import attribCache from "./workarea/hammergen-dump.json"
-export async function downloadAttribs() {
-	console.log("downloadAttribs", attribCache)
-
-
-	return attribCache
-
-	const cacheItems = [
-		"prayer",
-		"spell",
-		"talent",
-		"mutation",
-		"rune",
-		"skill",
-		"career",
-		"item",
-		"trait",
-	]
-
-
-	for (const path of cacheItems) {
-		try {
-			cache[path] = await hammergenApiWrapper(path)
-		} catch (error) {
-			console.error(error)
-		}
-	}
-	console.log(cache)
-	return cache
-}
 
 
 export async function getCharacters() {
-
-	const cacheItems = [
-		'character'
-	]
+	console.log("Starting", "getCharacters")
 
 
 	try {
@@ -63,17 +67,16 @@ export async function getCharacters() {
 }
 
 
-import exampleHammergenChar from "./workarea/examples/hammergen-full-character.json"
 export async function getCharacter(hammergenCharacterId) {
-
-	if (hammergenCharacterId == "800000000000000000000001") {
-		return exampleHammergenChar.data.object
-	}
-	return await hammergenApiWrapper('character/' + hammergenCharacterId + "?full=true")
+	console.log("Starting", "getCharacter")
+	let r = await hammergenApiWrapper('character/' + hammergenCharacterId + "?full=true")
+	console.log(r)
+	return r
 }
 
 import mappingTableLocal from "./mappingTableLocal.csv"
 export async function getMappingTable() {
+	console.log("Starting", "getMappingTable")
 	return mappingTableLocal
 
 

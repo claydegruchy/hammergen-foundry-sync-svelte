@@ -1,6 +1,5 @@
-import { downloadAttribs, getMappingTable } from "./hammergen-api"
-
-
+import { get } from "svelte/store";
+import { gameSettings } from "./gameSettings.js";
 
 let foundryTypeMap = {
 	trapping: "item",
@@ -42,12 +41,16 @@ export async function hammergenCharacterToFoundryActor(hammergenChar, foundryAct
 	let uiFeedback = []
 
 
-	const mappingTable = await getMappingTable()
+	const mappingTable = get(gameSettings.getStore("mappingTable"));
+	console.log("mapping table", mappingTable)
 
-	let cache = await downloadAttribs()
+	if (!mappingTable) {
+		uiFeedback.push("Error: Could not find local mapping table.")
+		return uiFeedback
+	}
 
 
-	console.log("starting map", cache, mappingTable)
+	console.log("starting map")
 
 
 
@@ -225,11 +228,12 @@ export async function hammergenCharacterToFoundryActor(hammergenChar, foundryAct
 
 
 	console.log("name")
-	await foundryActor.update({ "name": hammergenChar.name + Math.random() })
+	await foundryActor.update({ "name": hammergenChar.name })
 
 	console.log("notes", hammergenChar.notes)
 	await foundryActor.update({ "system.details.gmnotes.value": `<p>${hammergenChar.notes}</p>` })
-	console.log("description", hammergenChar.notes)
+	console.log("description", hammergenChar.description)
+	await foundryActor.update({ "system.details.biography.value": `<p>${hammergenChar.description}</p>` })
 	console.log("fate", hammergenChar.fate)
 	await foundryActor.update({ "system.status.fate.value": hammergenChar.fate })
 	console.log("fortune", hammergenChar.fortune)
@@ -258,8 +262,8 @@ export async function hammergenCharacterToFoundryActor(hammergenChar, foundryAct
 	// console.log("gold")
 
 
-
-
+	uiFeedback.push(`Character ${hammergenChar.name} updated successfully`)
+	return uiFeedback
 
 
 	// ####### updating foundry #######
