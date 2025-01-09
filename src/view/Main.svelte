@@ -69,7 +69,7 @@
          let out = await hammergenCharacterToFoundryActor(hammergenCharacter, foundryActor);
          uiFeedback = [...uiFeedback, ...out];
       } catch (error) {
-         console.error(error)
+         console.error(error);
          uiFeedback.push(`Error: Failed. Import system encountered an error: ${error}`);
       }
       // display uifeedback
@@ -110,7 +110,7 @@
       </div>
    {/if}
    <div class="flex">
-      {#if !$apiKey}
+      <!-- {#if !$apiKey}
          {#if !openLoginModal}
             <button on:click={() => (openLoginModal = true)}>Open Login Modal</button>
          {:else}
@@ -118,7 +118,7 @@
          {/if}
       {:else}
          <button on:click={() => ($apiKey = null)}>Logout</button>
-      {/if}
+      {/if} -->
 
       <button on:click={updateMappingTable}
          >Update Mapping Table {#if updateMappingTableLoading}
