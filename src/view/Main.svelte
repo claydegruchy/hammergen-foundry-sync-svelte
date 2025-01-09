@@ -69,6 +69,7 @@
          let out = await hammergenCharacterToFoundryActor(hammergenCharacter, foundryActor);
          uiFeedback = [...uiFeedback, ...out];
       } catch (error) {
+         console.error(error)
          uiFeedback.push(`Error: Failed. Import system encountered an error: ${error}`);
       }
       // display uifeedback

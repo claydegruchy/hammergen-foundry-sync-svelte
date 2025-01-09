@@ -37,9 +37,9 @@ async function hammergenApiWrapper(path) {
 	const apiKey = get(gameSettings.getStore("apiKey"));
 	console.log({ apiKey })
 	let options = {}
-	if (apiKey) {
-		options = { headers: { Authorization: 'Bearer ' + apiKey } }
-	}
+	// if (apiKey) {
+	// 	options = { headers: { Authorization: 'Bearer ' + apiKey } }
+	// }
 
 	const response = await fetch(base + path, options).then(r => r.json())
 	console.log(response)
