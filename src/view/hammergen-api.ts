@@ -5,41 +5,41 @@ const base = "https://hammergen-production-waxikk2naa-ew.a.run.app/api/wh/"
 // const base = "http://127.0.0.1:8082/api/wh/"
 const cache = {}
 
-// console.log(gameSettings.getStore("apiKey"),"")
 
 export async function loginToHammergen(username, password) {
 	console.log("Starting", "loginToHammergen")
 
-	// cant just login, need to do this shit as it uses a form
-	// var formData = new FormData()
-	// formData.append('myfile', file, 'someFileName.csv')
+	const formData = new FormData();
+	formData.append('username', username);
+	formData.append('password', password);
 
-
-	const { accessToken } = await fetch("https://hammergen-production-waxikk2naa-ew.a.run.app/api/token", {
-		method: "post",
-		headers: {
-			Authorization: "Basic " + btoa(username + ":" + password),
-		},
-	}).then(r => r.json())
-
-
-	if (accessToken) {
+	try {
+		const { accessToken } = await fetch("https://hammergen-production-waxikk2naa-ew.a.run.app/api/token", {
+			method: "POST",
+			body: formData
+		}).then(r => r.json())
+		if (!accessToken) throw "404"
 		const apiKey = gameSettings.getStore("apiKey")
 		apiKey.set(accessToken)
 		return true
+
+	} catch (error) {
+		console.error(error)
+		return false
+
 	}
-	return false
+
+
 }
 
 async function hammergenApiWrapper(path) {
 	console.log("Starting", "hammergenApiWrapper", base + path)
 
 	const apiKey = get(gameSettings.getStore("apiKey"));
-	console.log({ apiKey })
 	let options = {}
-	// if (apiKey) {
-	// 	options = { headers: { Authorization: 'Bearer ' + apiKey } }
-	// }
+	if (apiKey) {
+		options = { headers: { Authorization: 'Bearer ' + apiKey } }
+	}
 
 	const response = await fetch(base + path, options).then(r => r.json())
 	console.log(response)

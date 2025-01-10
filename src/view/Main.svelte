@@ -89,9 +89,23 @@
    let openLoginModal = false;
    let username = "";
    let password = "";
+
+   let startLoginLoading = "";
+
    async function startLogin() {
+      startLoginLoading = "Logging in...";
       let result = await loginToHammergen(username, password);
-      if (result) openLoginModal = false;
+      console.log({result})
+      if (result) {
+         startLoginLoading = "Login successful";
+         openLoginModal = false;
+         let username = "";
+         let password = "";
+         setTimeout(() => (startLoginLoading = ""), 3000);
+         return;
+      }
+      startLoginLoading = "Login failed, please check username/password";
+      setTimeout(() => (startLoginLoading = ""), 3000);
    }
 </script>
 
@@ -110,16 +124,6 @@
       </div>
    {/if}
    <div class="flex">
-      <!-- {#if !$apiKey}
-         {#if !openLoginModal}
-            <button on:click={() => (openLoginModal = true)}>Open Login Modal</button>
-         {:else}
-            <button on:click={() => (openLoginModal = false)}>Close Login Modal</button>
-         {/if}
-      {:else}
-         <button on:click={() => ($apiKey = null)}>Logout</button>
-      {/if} -->
-
       <button on:click={updateMappingTable}
          >Update Mapping Table {#if updateMappingTableLoading}
             <div>
@@ -134,6 +138,19 @@
             </div>
          {/if}</button
       >
+      {#if !$apiKey}
+         {#if !openLoginModal}
+            <button on:click={() => (openLoginModal = true)}>Open Login Modal</button>
+         {:else}
+            <button on:click={() => (openLoginModal = false)}
+               >Close Login Modal <div>{startLoginLoading}</div></button
+            >
+         {/if}
+      {:else}
+         <button on:click={() => ($apiKey = null)}
+            >Logout <div>{startLoginLoading}</div></button
+         >
+      {/if}
    </div>
    <div>
       <div>Foundry:</div>

@@ -21,3 +21,4 @@ one option could be including the froundry ID in every item in hammergen that bu
 - Animal Training (Pegasus) missing 
 - Lore (Magick) spelt without a k
 - find a way to auto sync when hammergen doesn't have a clear 'last updated' field
+- `Arcane Magic - Stealth` seems to get auto generated for humans, not just skaven

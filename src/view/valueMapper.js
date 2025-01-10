@@ -108,10 +108,19 @@ export async function hammergenCharacterToFoundryActor(hammergenChar, foundryAct
 
 		console.group(field)
 
+
 		let items = []
 		let quantities = []
+		console.log(hammergenChar[field])
+		for (const i of hammergenChar[field]) {
 
-		for (const { number, wh: { id, object: { name } } } of hammergenChar[field]) {
+			// we need to include this wacky stuff as hammergen arranges its objects in different ways (cant find a good pattern)
+			// this is mostly due to prayers being special
+			let number = i.number
+			let id = i?.wh?.id || i.id
+			let name = i?.wh?.object.name || i?.object.name
+
+
 			const mappedFoundryItem = mappingTable.find(item => item.HammergenId == id)
 
 			if (!mappedFoundryItem) {
@@ -191,7 +200,11 @@ export async function hammergenCharacterToFoundryActor(hammergenChar, foundryAct
 	for (const { current, number, wh: { id, object: { name } } } of [...hammergenChar.careerPath, hammergenChar.career,]) {
 		console.log(number, id, name, current)
 		const mappedFoundryItem = mappingTable.find(item => item.HammergenId == id)
-
+		if (!mappedFoundryItem) {
+			// could not find this career
+			uiFeedback.push(`Not Added: Career ${name} level ${number} could not be found in Foundry`)
+			continue;
+		}
 		let {
 			FoundryId,
 			HammergenId,
@@ -230,10 +243,13 @@ export async function hammergenCharacterToFoundryActor(hammergenChar, foundryAct
 	console.log("name")
 	await foundryActor.update({ "name": hammergenChar.name })
 
+
+	const formatText = text => text.replaceAll("\n", "<br/>")
+
 	console.log("notes", hammergenChar.notes)
-	await foundryActor.update({ "system.details.gmnotes.value": `<p>${hammergenChar.notes}</p>` })
+	await foundryActor.update({ "system.details.gmnotes.value": `<p>${formatText(hammergenChar.notes)}</p>` })
 	console.log("description", hammergenChar.description)
-	await foundryActor.update({ "system.details.biography.value": `<p>${hammergenChar.description}</p>` })
+	await foundryActor.update({ "system.details.biography.value": `<p>${formatText(hammergenChar.description)}</p>` })
 	console.log("fate", hammergenChar.fate)
 	await foundryActor.update({ "system.status.fate.value": hammergenChar.fate })
 	console.log("fortune", hammergenChar.fortune)
