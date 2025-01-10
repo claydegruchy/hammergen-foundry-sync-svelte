@@ -95,7 +95,6 @@
    async function startLogin() {
       startLoginLoading = "Logging in...";
       let result = await loginToHammergen(username, password);
-      console.log({result})
       if (result) {
          startLoginLoading = "Login successful";
          openLoginModal = false;
@@ -201,11 +200,13 @@
       </table>
       {#if uiFeedback.length > 0}
          <h3>Operation outcome</h3>
-         {#each uiFeedback as feedback}
-            <div>
-               {feedback}
-            </div>
-         {/each}
+         <ol>
+            {#each uiFeedback as feedback}
+               <li>
+                  {feedback}
+               </li>
+            {/each}
+         </ol>
       {/if}
    </div>
 </div>

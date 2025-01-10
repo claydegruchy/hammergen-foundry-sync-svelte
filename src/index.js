@@ -1,6 +1,7 @@
 import BasicApplication from './view/BasicApplication.js';
 // here we have the hook to start our app at startup
-// Hooks.once('ready', () => new BasicApplication().render(true, { focus: true }));
+// if you dont do this then it wont appear in settings
+Hooks.once('ready', () => new BasicApplication().render(false, { focus: false }));
 
 
 // here we will insert a button into settings

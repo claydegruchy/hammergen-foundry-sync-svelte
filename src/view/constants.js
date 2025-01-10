@@ -28,6 +28,7 @@ const settings = {
 	},
 
 	apiKey: {
+		name: "Hammergen API Key",
 		default: null,
 		scope: 'world',
 		config: true,
@@ -46,9 +47,10 @@ const settings = {
 	},
 
 	lastUpdate: {
+		name: "Last update",
 		default: new Date(0),
 		scope: 'client',
-		config: false,
+		config: true,
 		type: Date,
 	},
 }

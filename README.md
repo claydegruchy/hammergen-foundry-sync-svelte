@@ -1,26 +1,24 @@
-# what is this
-this is a tool that lets users migrate [hammergen](https://hammergen.net/) characters and [foundry wfrp 4e system](https://foundryvtt.com/packages/wfrp4e) actors between each system.
+# What is this
+This is a tool that lets users migrate [hammergen](https://hammergen.net/) characters to [foundry wfrp 4e system](https://foundryvtt.com/packages/wfrp4e) actors
 
 ![ScreenRecording2025-01-09at15 52 47-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/d4e987fb-5360-4664-8620-572b3bc8bfef)
 
-
-this is also mega early development so beware. currently only supports using the default example characters while i deal with login.
+Currently this system only support moving characters from hammergen to foundry, not the reverse.
 
 # how it works
-the plan is simple: a big mapping table. the table is just a google sheet (public [here](https://docs.google.com/spreadsheets/d/1wAtf6zVBo8AHSJfFJOyodfEE2uA3okLfEPxhNu1HMHw/edit?usp=sharing)) and works as a simple map between hammergenId and foundryId for each item (trapping, skill, talents, etc). the logic for this is [here](https://github.com/claydegruchy/hammergen-foundry-sync-svelte/blob/3ad44b5b9ed586fad052e0d0fb5bd70e9a5d694d/src/view/valueMapper.js#L21)
+Its a big mapping table. the table is just a google sheet (public [here](https://docs.google.com/spreadsheets/d/1wAtf6zVBo8AHSJfFJOyodfEE2uA3okLfEPxhNu1HMHw/edit?usp=sharing)) and works as a simple map between hammergenId and foundryId for each item (trapping, skill, talents, etc). the logic for this is [here](https://github.com/claydegruchy/hammergen-foundry-sync-svelte/blob/3ad44b5b9ed586fad052e0d0fb5bd70e9a5d694d/src/view/valueMapper.js#L21).
 
+I have only added items/careers/etc that appear in the base WFRP 4e book as thats all I personally own.
 
+# How do I use it?
+Once installed and enabled, you'll find a new entry in the Settings menu in game called "Hammergen Sync", this will open the sync window. Then:
+1. Login to your Hammergen account
+2. Find the character that you want to overwrite in foundry on the left (suggest making a new character)
+3. Select the character you want to download on the right
+4. Hit the download button
 
-# implimentation notes to self
-i cant just add a PR that adds a function to export a character to hammergen as the import to foundry is onerous with its requirements: every talent and skill (all of which are `items` in foundry) need to define their name, stats, etc which is a big pain to keep. its better just to have a mapping table and sync locally.
-
-one option could be including the froundry ID in every item in hammergen that but thats just moving the difficulty around; imagine the pain if theres a code refactor on the foundry wfrp4e system side.
-
-
-
-# other things to fix
-- talent Unshakeable is spelt Unshakable in rulebook
-- career levels cannot be searched by their level name, only the base career name. this makes mapping difficult but not impossible, it just means i need to do some roundabout stuff by reflecting off the inital linked character (which is always career level 2 in hammergen it seems) then using the level of that career to assign to the actor in foundry
-- Animal Training (Pegasus) missing 
-- Lore (Magick) spelt without a k
-- find a way to auto sync when hammergen doesn't have a clear 'last updated' field
+## Issues
+### Not all items exist
+After a sync check the error list to make sure nothing went wrong. Not everything can be perfectly mapped so there are cases where an item needed to be switched out for another (ie no "parchment" in Foundry, so "paper" is used instead), and some items just can't be mapped or don't exist between both.
+### Bag curse
+If you are running an older version of the WFRP4e module then you might need to delete the extra bags. Due to a bug in the WFRP module in Foundry, bags can't be auto deleted. Only an issue if you're syncing many times but deleting 25 bags can get pretty annoying so it may be worth not including bags in Hammergen.
