@@ -8,7 +8,6 @@ import {
 
 import { sveltePreprocess } from 'svelte-preprocess';
 
-import dsv from '@rollup/plugin-dsv'
 
 
 // ATTENTION!
@@ -106,7 +105,6 @@ export default ({ mode }) => {
             compilerOptions,
             preprocess: sveltePreprocess()
          }),
-         dsv(),
       ]
    };
 };

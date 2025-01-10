@@ -47,7 +47,7 @@ export default class BasicApplication extends SvelteApplication {
    static get defaultOptions() {
       return foundry.utils.mergeObject(super.defaultOptions, {
          title: 'TemplateESM.title',  // Automatically localized from `lang/en.json`.
-         width: 500,
+         width: 800,
          height: 'auto',
          resizable: true,
          svelte: {

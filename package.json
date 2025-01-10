@@ -14,10 +14,11 @@
     "#gameSettings": "./src/gameSettings.js"
   },
   "dependencies": {
-    "@rollup/plugin-dsv": "^3.0.5",
     "@sveltejs/vite-plugin-svelte": ">=3.x.x <4",
     "@typhonjs-fvtt/runtime": "^0.2.0-next.6",
     "@typhonjs-fvtt/standard": "^0.2.0-next.3",
+    "d3-dsv": "^3.0.1",
+    "papaparse": "^5.5.1",
     "svelte": "^4.2.19",
     "svelte-preprocess": ">=6",
     "vite": ">=5"

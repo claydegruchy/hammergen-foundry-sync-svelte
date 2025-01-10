@@ -1,8 +1,9 @@
 <script>
    import { getCharacters, getCharacter, getMappingTable, loginToHammergen } from "./hammergen-api.ts";
    import { hammergenCharacterToFoundryActor } from "./valueMapper.js";
-
    import { gameSettings } from "./gameSettings.js";
+
+   import FolderPath from "./FolderPath.svelte";
    //    console.log(gameSettings.getStore(settings.appStateClient), 123);
    //   console.log(gameSettings.getStore("somekey"), 123);
 
@@ -123,8 +124,14 @@
       </div>
    {/if}
    <div class="flex">
-      <button on:click={updateMappingTable}
-         >Update Mapping Table {#if updateMappingTableLoading}
+      <!-- <button on:click={() => ($mappingTable = [])}>clear</button> -->
+      <button on:click={updateMappingTable}>
+         {#if $mappingTable.length < 1}
+            ⚠️
+         {:else}{/if}
+         Update Mapping Table
+
+         {#if updateMappingTableLoading}
             <div>
                {updateMappingTableLoading}
             </div>
@@ -155,6 +162,7 @@
       <div>Foundry:</div>
       <table>
          <thead>
+            <th>Foundry Path</th>
             <th>Foundry Actor ({foundryActors.length})</th>
             <th>Hammergen Character ({hammergenCharacters.length})</th>
             <th>Operations</th>
@@ -163,6 +171,9 @@
          <tbody>
             {#each foundryActors as actor}
                <tr>
+                  <td>
+                     <FolderPath {actor} />
+                  </td>
                   <td>
                      <select disabled>
                         <option>{actor.name}</option>

@@ -2,14 +2,18 @@
   "id": "hammergen-foundry-sync-svelte",
   "name": "hammergen-foundry-sync-svelte",
   "title": "Hammergen Foundry sync",
-  "description": "tbd.",
-  "version": "0.0.1",
+  "description": "A Foundry VTT addon for synchronising Hammergen.net characters with Foundry VTT actors",
+  "version": "0.1.0",
   "manifestPlusVersion": "1.2.0",
-  "authors": [],
+  "authors": [
+    {
+      "name": "Clay DeGruchy"
+    }
+  ],
   "compatibility": {
     "minimum": 10,
     "verified": 10,
-    "maximum": 11
+    "maximum": 12
   },
   "esmodules": [
     "index.js"

@@ -1,3 +1,4 @@
+
 import { get } from "svelte/store";
 import { gameSettings } from "./gameSettings.js";
 
@@ -74,13 +75,20 @@ export async function getCharacter(hammergenCharacterId) {
 	return r
 }
 
-import mappingTableLocal from "./mappingTableLocal.csv"
+// import mappingTableLocal from "./mappingTableLocal.csv"
+
+// import { csvParse } from "d3-dsv";
+import Papa from 'papaparse';
+
 export async function getMappingTable() {
+
+
+	// console.log({ parsed })
+
 	console.log("Starting", "getMappingTable")
-	return mappingTableLocal
 
 
-	fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vS8ygCgKBLilt6C_JTROnL3mPDtkq0a9ZOQ345fhLRD-X8__RUk3GxtU3lJz0Zo19TCLyNrzkZtQzDp/pub?gid=1882191290&single=true&output=csv')
+	let res = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vS8ygCgKBLilt6C_JTROnL3mPDtkq0a9ZOQ345fhLRD-X8__RUk3GxtU3lJz0Zo19TCLyNrzkZtQzDp/pub?gid=1882191290&single=true&output=csv')
 
 		.then(response => {
 			if (!response.ok) {
@@ -88,4 +96,10 @@ export async function getMappingTable() {
 			}
 			return response.text();
 		})
+
+	const parsed = Papa.parse(res, { header: true }).data
+
+
+	return parsed
+
 }	
