@@ -1,7 +1,10 @@
 # what is this
 this is a tool that lets users migrate [hammergen](https://hammergen.net/) characters and [foundry wfrp 4e system](https://foundryvtt.com/packages/wfrp4e) actors between each system.
 
-this is also mega early development so beware
+![ScreenRecording2025-01-09at15 52 47-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/d4e987fb-5360-4664-8620-572b3bc8bfef)
+
+
+this is also mega early development so beware. currently only supports using the default example characters while i deal with login.
 
 # how it works
 the plan is simple: a big mapping table. the table is just a google sheet (public [here](https://docs.google.com/spreadsheets/d/1wAtf6zVBo8AHSJfFJOyodfEE2uA3okLfEPxhNu1HMHw/edit?usp=sharing)) and works as a simple map between hammergenId and foundryId for each item (trapping, skill, talents, etc). the logic for this is [here](https://github.com/claydegruchy/hammergen-foundry-sync-svelte/blob/3ad44b5b9ed586fad052e0d0fb5bd70e9a5d694d/src/view/valueMapper.js#L21)
@@ -21,4 +24,3 @@ one option could be including the froundry ID in every item in hammergen that bu
 - Animal Training (Pegasus) missing 
 - Lore (Magick) spelt without a k
 - find a way to auto sync when hammergen doesn't have a clear 'last updated' field
-- `Arcane Magic - Stealth` seems to get auto generated for humans, not just skaven
