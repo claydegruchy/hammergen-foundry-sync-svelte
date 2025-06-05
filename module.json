@@ -42,6 +42,6 @@
   "readme": "https://github.com/claydegruchy/hammergen-foundry-sync-svelte/blob/master/README.md",
   "bugs": "https://github.com/claydegruchy/hammergen-foundry-sync-svelte/issues",
   "changelog": "https://github.com/claydegruchy/hammergen-foundry-sync-svelte/releases/latest/",
-  "manifest": "https://github.com/claydegruchy/hammergen-foundry-sync-svelte//master/module.json",
+  "manifest": "https://raw.githubusercontent.com/claydegruchy/hammergen-foundry-sync-svelte/main/module.json",
   "download": "https://github.com/claydegruchy/hammergen-foundry-sync-svelte/archive/master.zip"
 }
